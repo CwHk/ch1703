@@ -1,0 +1,10 @@
+
+node_modules/
+dist/
+PNG/
+package.json
+
+.project
+*.log
+platforms/
+plugins/
