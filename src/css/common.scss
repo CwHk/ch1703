@@ -13,29 +13,6 @@
     display: -webkit-flex;
     display: flex;
 }
-<<<<<<< HEAD
-@mixin justify-content ($justify-content) {
-    -webkit-justify-content: $justify-content;
-    justify-content: $justify-content;
-    -moz-box-pack: $justify-content;
-    -webkit--moz-box-pack: $justify-content;
-    box-pack: $justify-content;
-}
-@mixin align-items ($align-items) {
-    align-items: $align-items;
-    -webkit-align-items: $align-items;
-    box-align: $align-items;
-    -moz-box-align: $align-items;
-    -webkit-box-align: $align-items;
-}
-
-
-// div{
-//   	width: 200px;
-//   	height: 200px;
-//   	@include flex( );
-// }
-=======
 
 @mixin justify-content ($justify-content) {
     -webkit-justify-content: $justify-content;
@@ -44,8 +21,6 @@
     -webkit--moz-box-pack: $justify-content;
     box-pack: $justify-content;
 }
->>>>>>> 089f0c6e6b9ee22bc13d1528543b8a1003c1968a
-
 @mixin align-items ($align-items) {
     align-items: $align-items;
     -webkit-align-items: $align-items;

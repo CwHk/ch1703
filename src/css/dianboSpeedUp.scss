@@ -66,6 +66,7 @@ nav{
 		    background-size: cover;
 		}
 		.toggle_box{
+			display: none;
 			width: 186px;
 			height: 288px;
 			position: absolute;
@@ -95,6 +96,11 @@ nav{
 			    background: #1872d0;
 			    top: calc(50% - 6px);
 			    right: 20px;
+			}
+		}
+		a.active:hover{
+			.toggle_box{
+				display: block;
 			}
 		}
 	}
@@ -138,7 +144,22 @@ section{
 			margin: 0;
 		}
 		div[class*='col-']{
-			
+			height: 265px;
+			padding-top: 30px;
+			h4{
+				font-size: 18px;
+				color: #000;
+				font-weight: 900;
+			}
+			p{
+				font-size: 14px;
+				color: #666;
+			}
 		}
+	}
+	.fenge{
+		height: 1px;
+		background:transparent url('../images/dianbo/fenge.png') no-repeat;
+		background-size: cover;
 	}
 }
