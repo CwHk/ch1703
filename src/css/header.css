@@ -7,6 +7,12 @@ header {
     background: rgba(206, 206, 206, 0.43);
 }
 
+.header-box {
+    background: url(../images/fenge.png) no-repeat;
+    background-size: 100% 2px;
+    background-position: center bottom;
+}
+
 header .container {
     height: 72px;
 }
