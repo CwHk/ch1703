@@ -1,0 +1,83 @@
+@import "common.scss";
+nav {
+    width: 100%;
+    height: 73px;
+    margin-top: 72px;
+    background: #fff;
+    .container {
+        margin: 0 auto;
+        height: 73px;
+        line-height: 73px;
+        padding: 0 68px;
+        text-align: center;
+        @include flex();
+        a {
+            height: 62px;
+            flex: 1;
+            font-size: 16px;
+            color: #181818;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+        }
+        a.active {
+            color: #1872d0;
+        }
+        a.active:after {
+            content: '';
+            position: absolute;
+            height: 4px;
+            width: 32px;
+            border-radius: 2px;
+            bottom: 2px;
+            left: calc(50% - 16px);
+            background-image: url('../images/dianbo/nav_xzk.png');
+            background-size: cover;
+        }
+        .toggle_box {
+            width: 186px;
+            height: 288px;
+            position: absolute;
+            left: -17px;
+            top: 84px;
+            background: #fff;
+            text-align: left;
+            z-index: 299;
+            div {
+                height: 48px;
+                line-height: 48px;
+                padding: 0 20px;
+                color: #666;
+                font-size: 14px;
+            }
+            div.active {
+                color: #000;
+                background: #f2f6f9;
+                position: relative;
+            }
+            div.active:after {
+                content: '';
+                position: absolute;
+                height: 12px;
+                width: 12px;
+                border-radius: 100%;
+                background: #1872d0;
+                top: calc(50% - 6px);
+                right: 20px;
+            }
+        }
+    }
+}
+
+.banner-box {
+    position: relative;
+    height: 720px;
+    .imgbox {
+        height: 100%;
+        width: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
