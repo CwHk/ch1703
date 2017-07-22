@@ -1,0 +1,46 @@
+$yh:"微软雅黑","Microsoft yahei";
+
+@mixin box ($box-sizing) {
+  	-webkit-box-sizing:$box-sizing;
+  	-moz-box-sizing:$box-sizing;
+  	-ms-box-sizing:$box-sizing;
+  	-o-box-sizing:$box-sizing;
+  	box-sizing:$box-sizing;
+}
+@mixin flex () {
+    display:-webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+@mixin justify-content () {
+    -webkit-justify-content:center;
+    justify-content:center;
+    -moz-box-pack:center;
+    -webkit--moz-box-pack:center;
+    box-pack:center;
+}
+@mixin justify-content () {
+    align-items:center;
+    -webkit-align-items:center;
+    box-align:center;
+    -moz-box-align:center;
+    -webkit-box-align:center;
+}
+@mixin justify-content () {
+    align-items:center;
+    -webkit-align-items:center;
+    box-align:center;
+    -moz-box-align:center;
+    -webkit-box-align:center;
+}
+
+
+div{
+  	width: 200px;
+  	height: 200px;
+  	@include box(border-box);
+}
+
+
