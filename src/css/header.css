@@ -66,6 +66,10 @@ header .container {
     display: block;
 }
 
+.bogobox {
+    padding-left: 0;
+}
+
 .logo img {
     width: 180px;
     height: 48px;
