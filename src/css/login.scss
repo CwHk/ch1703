@@ -94,7 +94,7 @@
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px)and (max-width:1200px) {
     .section {
         height: 1264px;
         .login-box {

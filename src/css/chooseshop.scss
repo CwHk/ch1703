@@ -7,8 +7,8 @@ nav {
     .container {
         margin: 0 auto;
         height: 73px;
+        padding: 0 70px;
         line-height: 73px;
-        padding: 0 68px;
         text-align: center;
         @include flex();
         a {
@@ -81,6 +81,7 @@ nav {
     }
     .banner-img {
         height: 160px;
+        padding: 0 15px 0 30px;
     }
     .bannerc-img {
         position: absolute;
@@ -89,7 +90,6 @@ nav {
         width: 100%;
     }
     .box {
-        margin: 0 80px;
         @include flex();
         .boxs {
             flex: 1;
@@ -115,26 +115,27 @@ nav {
         background-size: contain;
     }
     .configbox {
-        margin: 0 80px;
         position: relative;
         .show-detail {
             width: 288px;
             height: 458px;
             position: absolute;
-            right: 0;
+            right: 0px;
             top: 160px;
-            border: 1px solid #123;
+            border: 1px solid #f9faff;
+            padding-top: 24px;
         }
         .list-item {
             margin-bottom: 16px;
             .list-select-name {
                 float: left;
-                width: 150px;
+                width: 110px;
+                line-height: 31px;
                 text-align: right;
                 padding-right: 48px;
             }
             .select-box {
-                margin-left: 150px;
+                margin-left: 110px;
                 max-width: 680px;
                 .active {
                     border: 1px solid #267ad3;
