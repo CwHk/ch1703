@@ -71,13 +71,73 @@ nav {
 
 .banner-box {
     position: relative;
-    height: 720px;
+    height: 648px;
     .imgbox {
         height: 100%;
-        width: 100%;
         img {
             height: 100%;
             width: 100%;
+        }
+    }
+    .banner-img {
+        height: 160px;
+    }
+    .bannerc-img {
+        position: absolute;
+        bottom: 0;
+        height: 160px;
+        width: 100%;
+    }
+    .box {
+        margin: 0 80px;
+        @include flex();
+        .boxs {
+            flex: 1;
+            height: 100%;
+            img {
+                display: block;
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+.basic-configuration {
+    .configtext {
+        margin-top: 44px;
+        margin-bottom: 28px;
+        text-align: center;
+        font-size: 32px;
+        line-height: 32px;
+        background: url(../images/zhuangshitiao.png) no-repeat 0 center;
+        background-size: contain;
+    }
+    .configbox {
+        margin: 0 80px;
+        .list-item {
+            margin-bottom: 16px;
+            .list-select-name {
+                float: left;
+                width: 150px;
+                text-align: right;
+                padding-left: 88px;
+            }
+            .select-box {
+                margin-left: 150px;
+                width: 680px;
+                .item {
+                    width: 108px;
+                    display: inline-block;
+                    height: 31px;
+                    line-height: 31px;
+                    text-align: center;
+                    color: #000;
+                    position: relative;
+                    font-size: 14px;
+                }
+            }
         }
     }
 }
