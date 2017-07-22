@@ -1,0 +1,49 @@
+footer {
+    background: #f8f8f8;
+}
+
+.footer_top {
+    padding-top: 16px;
+    padding-bottom: 24px;
+}
+
+.letf_title {
+    font-size: 16px;
+    line-height: 16px;
+    padding-bottom: 24px;
+    color: #181818;
+    border-bottom: 1px solid #636363;
+}
+
+.left_con {
+    padding-top: 22px;
+}
+
+.left_con span,
+.left_con p {
+    font-size: 14px;
+    height: 14px;
+    color: #181818;
+}
+
+.left_con p {
+    margin-top: 14px;
+}
+
+.footer_bottom {
+    border-top: 1px solid #636363;
+    font-size: 12px;
+    color: #181818;
+    padding: 20px 0;
+}
+
+.footer_bottom span {
+    margin-left: 18px;
+}
+
+.runmar {
+    font-size: 18px;
+    color: #1872d0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

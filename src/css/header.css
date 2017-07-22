@@ -1,0 +1,104 @@
+header {
+    position: fixed;
+    top: 0;
+    height: 72px;
+    width: 100%;
+    z-index: 100;
+    background: rgba(206, 206, 206, 0.43);
+}
+
+header .container {
+    height: 72px;
+}
+
+.login {
+    width: 100px;
+    height: 32px;
+    cursor: pointer;
+    float: right;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #007aff;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    margin-top: 22px;
+    margin-right: 30px
+}
+
+.login a,
+.regiser a {
+    text-decoration: none;
+}
+
+.login:hover {
+    background: #fff;
+}
+
+.regiser:hover {
+    background: #fff;
+}
+
+.regiser {
+    cursor: pointer;
+    width: 100px;
+    height: 32px;
+    float: right;
+    font-size: 16px;
+    color: #ffffff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    line-height: 32px;
+    text-align: center;
+    margin-top: 22px;
+    margin-right: 80px;
+}
+
+.logo {
+    width: 180px;
+    height: 48px;
+    margin-top: 12px;
+    display: block;
+    margin-left: 80px;
+}
+
+.logo img {
+    width: 180px;
+    height: 48px;
+}
+
+.fix_right {
+    width: 50px;
+    height: 174px;
+    position: fixed;
+    top: calc(50% - 87px);
+    right: 0px;
+    z-index: 999;
+}
+
+.fix_right>div {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+}
+
+.fix_right .ybl_qq {
+    animation: tiaodong 0.5s linear 0s infinite alternate;
+    -webkit-animation: tiaodong 0.5s linear 0s infinite alternate;
+}
+
+@keyframes tiaodong {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.fix_right .ybl_wx {
+    margin-bottom: 0;
+}
