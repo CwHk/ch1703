@@ -124,7 +124,7 @@ section{
 			}
 		}
 	}
-	.fwts{
+	.yfwtx{
 		h3{
 			height: 30px;
 			margin-top: 48px;
@@ -152,10 +152,10 @@ section{
 	}
 	.fenge{
 		height: 1px;
-		background:transparent url('../images/dianbo/fengehui.png') no-repeat;
+		background:transparent url('../images/dianbo/fenge.png') no-repeat;
 		background-size: cover;
 	}
-	.hxnr{
+	.hxgn{
 		.row{
 			.h_title{
 				font-size: 24px;
@@ -163,7 +163,7 @@ section{
 				font-weight: 900;
 				text-align: center;
 				margin-top: 46px;
-				margin-bottom: 0px;
+				margin-bottom: 20px;
 			}
 			div[class*='col-']{
 				padding-top: 0px;
@@ -172,7 +172,7 @@ section{
 					font-size: 16px;
 					color: #000;
 					font-weight: 500;
-					margin-top: 15px;
+					margin-top: 10px;
 				}
 				p{
 					font-size: 14px;
@@ -208,13 +208,14 @@ section{
 					height: 48px;
 					line-height: 48px;
 					font-size: 14px;
-					color: #191919;
+					color: #6f6f6f;
 					list-style-type: disc;
 				}
 			}
 			.center{
 				ul{
 					padding-left: 40px;
+					font-size: 14px;
 				}
 			}
 		}
@@ -222,6 +223,11 @@ section{
 			background-color: #fff;
 			box-shadow: 0px 0px 10px 1px #1872d0;
 			z-index: 320;
+			ul{
+				li{
+					color: #191919;
+				}
+			}
 		}
 	}
 	.cpys_title{
