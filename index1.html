@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta charset='utf-8' />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>仿站CDN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
@@ -8,6 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/kx.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -21,7 +24,7 @@
             <div class="col-sm-6 col-xs-6 phonebox">
                 <div class="row">
                     <div class="regiser"><a href="javascript:void(0)">注册</a></div>
-                    <div class="login"><a href="javascript:void(0)">登录</a></div>
+                    <div class="login"><a href="./html/login.html">登录</a></div>
                 </div>
             </div>
         </div>
@@ -373,7 +376,7 @@
                     <div style="position: relative;">
                         <img src="images/jfdetail_3_03.png">
                         <b class="city">佛山</b>
-                        <b class="city_feature">高仿双线</b>
+                        <b class="city_feature">高防双线</b>
                     </div>
                 </div>
             </div>
@@ -463,13 +466,14 @@
 <script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/swiper.min.js"></script>
-<script src="js/kx.js" type="text/javascript" charset="utf-8" ></script>
+<script src="js/kx.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     function selectGuonei(obj) {
         console.log(obj.selectedIndex);
         console.log(obj.value);
         $('.city').html(obj.value);
     }
+
     function selectGuowai(obj) {
         console.log(obj.selectedIndex);
         console.log(obj.value);

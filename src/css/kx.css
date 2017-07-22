@@ -44,13 +44,17 @@ header .container {
     margin-top: 22px;
     margin-right: 30px
 }
-.login a,.regiser a{
+
+.login a,
+.regiser a {
     text-decoration: none;
 }
-.login:hover{
+
+.login:hover {
     background: #fff;
 }
-.regiser:hover{
+
+.regiser:hover {
     background: #fff;
 }
 
@@ -300,7 +304,7 @@ h3,
     padding: 70px 76px 30px;
 }
 
-.mart-6 .container .row>[class*='col-']:hover{
+.mart-6 .container .row>[class*='col-']:hover {
     box-shadow: 0 0 10px 1px #bec2cf;
 }
 
@@ -309,7 +313,7 @@ h3,
     // background: url('../images/guoneijf.png') no-repeat center center;
     background-image: url(../images/guoneijf.png);
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     background-size: 80% 80%;
     position: relative;
 }
@@ -383,56 +387,6 @@ h3,
     font-size: 20px;
 }
 
-footer {
-    background: #f8f8f8;
-}
-
-.footer_top {
-    padding-top: 16px;
-    padding-bottom: 24px;
-}
-
-.letf_title {
-    font-size: 16px;
-    line-height: 16px;
-    padding-bottom: 24px;
-    color: #181818;
-    border-bottom: 1px solid #636363;
-}
-
-.left_con {
-    padding-top: 22px;
-}
-
-.left_con span,
-.left_con p {
-    font-size: 14px;
-    height: 14px;
-    color: #181818;
-}
-
-.left_con p {
-    margin-top: 14px;
-}
-
-.footer_bottom {
-    border-top: 1px solid #636363;
-    font-size: 12px;
-    color: #181818;
-    padding: 20px 0;
-}
-
-.footer_bottom span {
-    margin-left: 18px;
-}
-
-.runmar {
-    font-size: 18px;
-    color: #1872d0;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
 .boxs-num a {
     text-decoration: none;
 }
@@ -441,40 +395,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.fix_right{
-    width: 50px;
-    height: 174px;
-    position: fixed;
-    top: calc(50% - 87px);
-    right: 0px;
-    z-index: 999;
-}
-.fix_right > div{
-    width: 50px;
-    height: 50px;
-    margin-bottom: 12px;
-}
-
-.fix_right .ybl_qq{
-    animation: tiaodong 0.5s linear 0s infinite alternate;
-    -webkit-animation: tiaodong 0.5s linear 0s infinite alternate;
-}
-@keyframes tiaodong{
-    // 0% {transform: scale(1.4,1.4);}
-    // 10% {transform: scale(1,1);}
-    // 25% {transform: scale(1.2,1.2);}
-    // 50% {transform: scale(1,1);}
-    // 70% {transform: scale(1.2,1.2);}
-    // 100% {transform: scale(1,1);}
-    0% {transform: scale(1,1);}
-    50% {transform: scale(1.2,1.2);}
-    100% {transform: scale(1,1);}
-}
-
-.fix_right .ybl_wx{
-    margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
