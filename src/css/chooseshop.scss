@@ -116,19 +116,34 @@ nav {
     }
     .configbox {
         margin: 0 80px;
+        position: relative;
+        .show-detail {
+            width: 288px;
+            height: 458px;
+            position: absolute;
+            right: 0;
+            top: 160px;
+            border: 1px solid #123;
+        }
         .list-item {
             margin-bottom: 16px;
             .list-select-name {
                 float: left;
                 width: 150px;
                 text-align: right;
-                padding-left: 88px;
+                padding-right: 48px;
             }
             .select-box {
                 margin-left: 150px;
-                width: 680px;
+                max-width: 680px;
+                .active {
+                    border: 1px solid #267ad3;
+                    background: #f2f6f9;
+                    border-radius: 20px;
+                }
                 .item {
                     width: 108px;
+                    margin-bottom: 8px;
                     display: inline-block;
                     height: 31px;
                     line-height: 31px;

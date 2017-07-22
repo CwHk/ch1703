@@ -68,17 +68,74 @@
                     <div class="list-item">
                         <div class="list-select-name">城市</div>
                         <div class="select-box">
-                            <div class="item">广东</div>
-                            <div class="item">东北</div>
-                            <div class="item">浙江</div>
-                            <div class="item">辽宁</div>
-                            <div class="item">黑龙江</div>
-                            <div class="item">香港</div>
-                            <div class="item">东北</div>
-                            <div class="item">东北</div>
-                            <div class="item">东北</div>
-                            <div class="item">东北</div>
+                            <div class="item active">广东</div>
+                            <div class="item"><span class="text-c">东北</span></div>
+                            <div class="item"><span class="text-c">浙江</span></div>
+                            <div class="item"><span class="text-c">辽宁</span></div>
+                            <div class="item"><span class="text-c">黑龙江</span></div>
+                            <div class="item"><span class="text-c">香港</span></div>
+                            <div class="item"><span class="text-c">台湾</span></div>
+                            <div class="item"><span class="text-c">新加坡</span></div>
+                            <div class="item"><span class="text-c">泰国</span></div>
+                            <div class="item"><span class="text-c">印尼</span></div>
+                            <div class="item"><span class="text-c">菲利宾</span></div>
+                            <div class="item"><span class="text-c">日本</span></div>
+                            <div class="item"><span class="text-c">德国</span></div>
+                            <div class="item"><span class="text-c">美国</span></div>
+                            <div class="item"><span class="text-c">越南</span></div>
+                            <div class="item"><span class="text-c">添加文字</span></div>
                         </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-select-name">线路</div>
+                        <div class="select-box">
+                            <div class="item"><span class="text-c">佛山高防双线</span></div>
+                            <div class="item"><span class="text-c">佛山高防双线</span></div>
+                            <div class="item"><span class="text-c">佛山高防双线</span></div>
+                            <div class="item"><span class="text-c">佛山高防双线</span></div>
+                            <div class="item"><span class="text-c">佛山高防双线</span></div>
+                            <div class="item"><span class="text-c">佛山高防双线</span></div>
+                            <div class="item"><span class="text-c">香港高防双线</span></div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-select-name">CPU</div>
+                        <div class="select-box">
+                            <div class="item"><span class="text-c">1核</span></div>
+                            <div class="item"><span class="text-c">1核</span></div>
+                            <div class="item"><span class="text-c">1核</span></div>
+                            <div class="item"><span class="text-c">1核</span></div>
+                            <div class="item"><span class="text-c">1核</span></div>
+                            <div class="item"><span class="text-c">1核</span></div>
+                            <div class="item"><span class="text-c">64核</span></div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-select-name">内存</div>
+                        <div class="select-box">
+                            <div class="item"><span class="text-c">1Gb</span></div>
+                            <div class="item"><span class="text-c">1Gb</span></div>
+                            <div class="item"><span class="text-c">1Gb</span></div>
+                            <div class="item"><span class="text-c">1Gb</span></div>
+                            <div class="item"><span class="text-c">1Gb</span></div>
+                            <div class="item"><span class="text-c">1Gb</span></div>
+                            <div class="item"><span class="text-c">64Gb</span></div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-select-name">系统盘</div>
+                        <div class="select-box">
+                            <div class="item active">32Gb</div>
+                            <div class="item"><span class="text-c">32Gb</span></div>
+                            <div class="item"><span class="text-c">32Gb</span></div>
+                            <div class="item"><span class="text-c">32Gb</span></div>
+                            <div class="item"><span class="text-c">32Gb</span></div>
+                            <div class="item"><span class="text-c">32Gb</span></div>
+                            <div class="item"><span class="text-c">512Gb</span></div>
+                        </div>
+                    </div>
+                    <div class="show-detail">
+
                     </div>
                 </div>
             </div>
@@ -157,6 +214,10 @@
     $('nav a').on("click", function() {
         $(this).addClass("active")
         $(this).siblings('a').removeClass('active');
+    })
+    $('.select-box .item').on("click", function() {
+        $(this).addClass("active")
+        $(this).siblings('.item').removeClass('active');
     })
 </script>
 
