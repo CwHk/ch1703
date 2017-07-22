@@ -40,19 +40,19 @@ gulp.task('fonts', function() {
 //            .pipe(connect.reload());            //热加载;
 // });
 
-gulp.task('copy-css', function() {
-    return gulp.src('src/css/**/*.css')
-        .pipe(gulp.dest('dist/css'))
-        .pipe(connect.reload()); //热加载;
-});
+// gulp.task('copy-css', function() {
+//     return gulp.src('src/css/**/*.css')
+//         .pipe(gulp.dest('dist/css'))
+//         .pipe(connect.reload()); //热加载;
+// });
 
 gulp.task('sass', function() {
-    return gulp.src('src/css/**/*.scss')
-        .pipe(sass()) //用gulp-sass插件编译scss到css
+    return gulp.src('src/css/**/*')
+        .pipe(sass().on('error',sass.logError)) //用gulp-sass插件编译scss到css
         .pipe(gulp.dest('dist/css'))
-        .pipe(minifyCSS()) //最小化css
-        .pipe(rename('main.min.css')) //重命名css
-        .pipe(gulp.dest('dist/css'))
+        // .pipe(minifyCSS()) //最小化css
+        // .pipe(rename('main.min.css')) //重命名css
+        // .pipe(gulp.dest('dist/css'))
         .pipe(connect.reload()); //热加载;
 });
 
@@ -80,7 +80,7 @@ gulp.task('clean', function(cb) {
 //     console.log('编译成功！');
 // });
 gulp.task('build', function(callback) {
-    runSequence('clean', ['copy-index', 'copy-html', 'images', 'fonts', 'sass', 'copy-css', 'copy-js', 'scripts'], function() {
+    runSequence('clean', ['copy-index', 'copy-html', 'images', 'fonts', 'sass', 'copy-js', 'scripts'], function() {
         console.log('编译成功！');
     })
 });
@@ -98,8 +98,8 @@ gulp.task('watch', function() { //监视任务
     gulp.watch('src/html/**/*.html', ['copy-html']);
     gulp.watch('src/images/**/*', ['images']);
     // gulp.watch(['src/xml/*.xml','src/json/*.json','!src/json/test-*.json'],['data']);
-    gulp.watch('src/css/**/*.scss', ['sass']);
-    gulp.watch('src/css/**/*.css', ['copy-css']);
+    gulp.watch('src/css/**/*', ['sass']);
+    // gulp.watch('src/css/**/*.css', ['copy-css']);
     gulp.watch(['src/js/*.js', '!src/js/jquery-1.11.3.js', '!src/js/swiper-3.3.1.min.js'], ['copy-js']);
     gulp.watch(['src/js/jquery-1.11.3.js', 'src/js/swiper-3.3.1.min.js'], ['sass'], ['scripts']);
 });
