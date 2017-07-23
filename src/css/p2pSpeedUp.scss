@@ -124,7 +124,7 @@ section{
 			}
 		}
 	}
-	.yfwtx{
+	.fwts{
 		h3{
 			height: 30px;
 			margin-top: 48px;
@@ -149,90 +149,10 @@ section{
 				color: #666;
 			}
 		}
-	}
-	.fenge{
-		height: 1px;
-		background:transparent url('../images/dianbo/fenge.png') no-repeat;
-		background-size: cover;
-	}
-	.hxgn{
-		.row{
-			.h_title{
-				font-size: 24px;
-				color: #000;
-				font-weight: 900;
-				text-align: center;
-				margin-top: 46px;
-				margin-bottom: 20px;
-			}
-			div[class*='col-']{
-				padding-top: 0px;
-				height: 180px;
-				h4{
-					font-size: 16px;
-					color: #000;
-					font-weight: 500;
-					margin-top: 10px;
-				}
-				p{
-					font-size: 14px;
-					height: 14px;
-					color: #666;
-				}
-				.title-tops{
-					margin-top: 18px;
-				}
-			}
-		}
-		h3{
-			margin-top: 38px;
-			margin-bottom: 48px;
-		}
-	}
-	.jjfa{
-		height: 840px;
-		width: 100%;
-		background:transparent url('../images/dianbo/jjfabg.png') left top no-repeat;
-		background-size: 100% 100%;
-		.row{
-			height: 280px;
-			padding: 36px 0;
-			background-color: #f9f9f9;
-			z-index: 310;
-			h4{
-				color: #2f80d5;
-				font-size: 24px;
-			}
-			ul{
-				li{
-					height: 48px;
-					line-height: 48px;
-					font-size: 14px;
-					color: #6f6f6f;
-					list-style-type: disc;
-				}
-			}
-			.center{
-				ul{
-					padding-left: 40px;
-					font-size: 14px;
-				}
-			}
-		}
-		.row.active{
-			background-color: #fff;
-			box-shadow: 0px 0px 10px 1px #1872d0;
-			z-index: 320;
-			ul{
-				li{
-					color: #191919;
-				}
-			}
-		}
-	}
+	}	
 	.cpys_title{
 		h3{
-			margin-top: 48px;
+			margin-top: 0px;
 			margin-bottom: 48px;
 		}
 	}
@@ -269,9 +189,38 @@ section{
 			}
 			div:last-child{
 				margin-right: 0;
+			}			
+		}		
+	}
+	.jrlc_title h3{
+		height: 30px;
+		margin-top: 48px;
+		margin-bottom: 48px;
+	}
+	.jrlc{
+		margin-bottom: 48px;
+		.row{
+			div[class*='col-']{
+				padding-top: 0px;
+				height: 180px;
+				h4{
+					font-size: 24px;
+					color: #2f80d5;
+					font-weight: 500;
+					margin-top: 10px;
+				}
+				ul{
+					li{
+						font-size: 16px;
+						color: #191919;
+					}
+				}
 			}
-			
 		}
-		
+		.bottom_line{
+			height: 1px;
+			background:transparent url('../images/dianbo/fengehui.png') no-repeat;
+			background-size: cover;
+		}
 	}
 }
