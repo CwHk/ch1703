@@ -1,0 +1,225 @@
+@import "common";
+@import "./header.css";
+@import "./footer.css";
+
+.swiper-container {
+    width: 100%;
+    height: 650px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    border: 1px solid #fff;
+}
+
+.swiper-container .swiper-pagination-bullet-active {
+    background: #007aff;
+}
+
+h3 {
+    background: url('../images/zhuangshitiao.png') no-repeat 0 center;
+    background-size: contain;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+nav{
+	width: 100%;
+	height: 73px;
+	margin-top: 72px;
+	background:transparent url('../images/dianbo/nav_bg.png') no-repeat;
+	.container{
+		margin: 0 auto;
+        height: 73px;
+        line-height: 73px;
+        padding: 0 68px;
+        text-align: center;
+        @include flex();
+		a{
+			height: 62px;
+            flex: 1;
+			font-size: 16px;
+			color: #181818;
+			text-decoration: none;
+			cursor: pointer;
+			position: relative;
+		}
+		a.active{
+			color: #1872d0;
+		}
+		a.active:after{
+			content: '';
+		    position: absolute;		    
+		    height: 4px;
+		    width: 32px;
+		    border-radius: 2px;
+		    bottom: 2px;
+		    left: calc(50% - 16px);
+		    background-image: url('../images/dianbo/nav_xzk.png');
+		    background-size: cover;
+		}
+		.toggle_box{
+			display: none;
+			width: 186px;
+			height: 288px;
+			position: absolute;
+			left: -17px;
+			top: 84px;
+			background: #fff;
+			text-align: left;
+			z-index: 299;
+			div{
+				height: 48px;
+				line-height: 48px;
+				padding:0 20px;
+				color: #666;
+				font-size: 14px;
+			}
+			div.active{
+				color: #000;
+				background: #f2f6f9;
+				position: relative;
+			}
+			div.active:after{
+				content: '';
+			    position: absolute;		    
+			    height: 12px;
+			    width: 12px;
+			    border-radius: 100%;
+			    background: #1872d0;
+			    top: calc(50% - 6px);
+			    right: 20px;
+			}
+		}
+	}
+}
+section{
+	.banner-box{
+		height: 650px;
+		position: relative;
+		.banner_text{
+			height: 98px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 310;
+			background:transparent url('../images/dianbo/banner_bgbottom.png') no-repeat;
+			p{
+				height: 24px;
+				line-height: 24px;
+				font-size: 24px;
+				color: #fff;
+				text-align: center;
+				margin-top: 15px;
+				margin-bottom: 0;
+			}
+			p:nth-child(2){
+				margin-top: 20px;
+			}
+		}
+	}
+	.spsyq{
+		background:transparent url('../images/liumeiti/huojian.png') center 10px no-repeat;
+		h3{
+			height: 30px;
+			margin-top: 48px;
+			margin-bottom: 98px;
+		}
+		.row{
+			h4.h_title{
+				text-align: center;
+				margin-top: 20px;
+				margin-bottom: 34px;
+				font-size: 24px;
+				color: #000;
+			}
+			p{
+				// font-size: 16;
+				// line-height: 24px;
+				// text-align: center;
+				// margin: 0;
+			}
+			div[class*='col-']{
+				min-height: 245px;
+				padding-top: 10px;
+				h4{
+					font-size: 18px;
+					color: #191919;
+					font-weight: 500;
+					margin-bottom: 20px;
+				}
+				p{
+					font-size: 14px;
+					color: #666;
+				}
+			}
+		}
+		h3.sdk_title{
+			margin-bottom: 48px;
+			margin-top: 28px;
+		}
+	}
+	.sdk{
+		height: 840px;
+		width: 100%;
+		background:transparent url('../images/dianbo/jjfabg.png') left top no-repeat;
+		background-size: 100% 100%;
+		.row{
+			height: 280px;
+			padding: 36px 0;
+			position: relative;
+			background-color: #f9f9f9;
+			z-index: 310;
+			h4{
+				color: #2f80d5;
+				font-size: 24px;
+			}
+			ul{
+				li{
+					height: 48px;
+					line-height: 48px;
+					font-size: 14px;
+					color: #6f6f6f;
+					list-style-type: disc;
+				}
+			}
+			.center{
+				ul{
+					padding-left: 40px;
+					font-size: 14px;
+				}
+			}
+			.more{
+				width: 104px;
+				height: 32px;
+				position: absolute;
+				right: 28px;
+				bottom: 56px;
+				line-height: 32px;
+				text-align: center;
+				border: 1px solid #1872d0;
+				border-radius: 16px;
+				font-size: 14px;
+				color: #191919;
+				cursor: pointer;
+
+			}
+		}
+		.row.active{
+			background-color: #fff;
+			box-shadow: 0px 0px 10px 1px #1872d0;
+			z-index: 320;
+			ul{
+				li{
+					color: #191919;
+				}
+			}
+		}
+	}
+}
