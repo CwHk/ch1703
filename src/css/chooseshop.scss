@@ -7,8 +7,8 @@ nav {
     .container {
         margin: 0 auto;
         height: 73px;
+        padding: 0 70px;
         line-height: 73px;
-        padding: 0 68px;
         text-align: center;
         @include flex();
         a {
@@ -81,6 +81,7 @@ nav {
     }
     .banner-img {
         height: 160px;
+        padding: 0 15px 0 30px;
     }
     .bannerc-img {
         position: absolute;
@@ -89,7 +90,6 @@ nav {
         width: 100%;
     }
     .box {
-        margin: 0 80px;
         @include flex();
         .boxs {
             flex: 1;
@@ -104,31 +104,276 @@ nav {
     }
 }
 
-.basic-configuration {
+body {
+    background: #f8f8f8;
+}
+
+.huifg {
+    background: url(../images/huifenge.png) no-repeat center bottom;
+    background-size: contain;
+}
+
+.xi-onfig {
     .configtext {
-        margin-top: 44px;
-        margin-bottom: 28px;
+        padding-top: 44px;
+        padding-bottom: 28px;
         text-align: center;
         font-size: 32px;
         line-height: 32px;
-        background: url(../images/zhuangshitiao.png) no-repeat 0 center;
+        background: url(../images/zhuangshitiao.png) no-repeat center center;
         background-size: contain;
     }
     .configbox {
-        margin: 0 80px;
+        position: relative;
+        .choose-item {
+            .list-select-name {
+                float: left;
+                width: 150px;
+                line-height: 31px;
+                text-align: right;
+                padding-right: 48px;
+            }
+            .select-box {
+                margin-left: 150px;
+                max-width: 700px;
+                font-size: 14px;
+                .item-box {
+                    width: 172px;
+                    margin-right: 18px;
+                    float: left;
+                    .text-zd {
+                        text-align: center;
+                        font-size: 14px;
+                        padding-top: 23;
+                        padding-bottom: 34px;
+                    }
+                    .item {
+                        width: 172px;
+                        height: 172px;
+                        border: 1px solid #e8eaf9;
+                        position: relative;
+                        background: #fff;
+                        .jiabck {
+                            height: 54px;
+                            background: url(../images/jia.png) no-repeat center center;
+                            background-size: 30px 30px;
+                        }
+                        .close {
+                            position: absolute;
+                            background: url(../images/close.png) no-repeat center center;
+                            background-size: contain;
+                            top: 12px;
+                            right: 11px;
+                            height: 14px;
+                            z-index: 10;
+                            width: 12px;
+                        }
+                        .box-text-detail-bottom {
+                            text-align: center;
+                            font-size: 12px;
+                            color: #c7c7c7;
+                            line-height: 36px;
+                        }
+                        .inputbox {
+                            width: 130px;
+                            height: 32px;
+                            background: #f0f2f5;
+                            margin: 0 auto;
+                            input {
+                                display: block;
+                                background: #f0f2f5;
+                                height: 100%;
+                                padding: 0 11px;
+                                text-align: right;
+                                font-size: 14px;
+                                width: 100%;
+                                border: 0;
+                            }
+                        }
+                        .icobxox {
+                            height: 93px;
+                            width: 172px;
+                            @include flex();
+                            @include align-items(center);
+                            @include justify-content (center);
+                            img {
+                                height: 49px;
+                                width: 37px;
+                            }
+                        }
+                    }
+                }
+                .choosebox:last-child {
+                    margin-right: 0;
+                }
+                .text-choose {
+                    line-height: 60px;
+                    font-size: 12px;
+                    float: left;
+                    color: #898989;
+                }
+                .choosebox:after {
+                    content: "";
+                    position: absolute;
+                    height: 32px;
+                    width: 35px;
+                    top: 0;
+                    right: 0;
+                    background: url(../images/go-bottom.png) no-repeat;
+                    background-position: center center;
+                    background-size: 12px 7px;
+                }
+                .choosebox {
+                    position: relative;
+                    float: left;
+                    margin-right: 18px;
+                }
+                .chooseboxs {
+                    width: 130px;
+                    height: 32px;
+                    background: #fff;
+                }
+                .chooseboxbig {
+                    width: 396px;
+                    height: 32px;
+                    margin-right: 0;
+                    position: relative;
+                    background: #fff;
+                }
+                .choosextdetai {
+                    width: 396px;
+                    height: 32px;
+                    padding: 0 13px;
+                    border-radius: 0;
+                    border: 1px solid #e8e9f8;
+                    position: absolute;
+                    background: transparent;
+                    z-index: 12;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                }
+                .choosext {
+                    width: 130px;
+                    height: 32px;
+                    padding: 0 13px;
+                    border-radius: 0;
+                    border: 1px solid #e8e9f8;
+                    position: absolute;
+                    top: 0;
+                    background: transparent;
+                    z-index: 12;
+                    left: 0;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                }
+            }
+        }
+    }
+}
+
+.jiqi-back {
+    background: url(../images/jiqi.png) no-repeat;
+    background-position: 87% 17%;
+}
+
+.basic-configuration {
+    background: #fff;
+    .configtext {
+        padding-top: 44px;
+        padding-bottom: 28px;
+        text-align: center;
+        font-size: 32px;
+        line-height: 32px;
+        background: url(../images/zhuangshitiao.png) no-repeat center center;
+        background-size: contain;
+    }
+    .configbox {
+        position: relative;
+        .show-detail {
+            width: 288px;
+            height: 458px;
+            position: absolute;
+            background: #fff;
+            z-index: 10;
+            right: 0px;
+            top: 160px;
+            border: 1px solid #e9eaef;
+            padding-top: 24px;
+            .buy-btn {
+                width: 200px;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+                font-size: 16px;
+                margin: 0 auto;
+                border: 1px solid #1872d0;
+                span {
+                    color: #1872d0;
+                }
+            }
+            .money-detail {
+                height: 80px;
+                line-height: 80px;
+                text-align: center;
+                font-size: 24px;
+                .text-iocn {
+                    position: relative;
+                }
+                .text-iocn::after {
+                    content: '';
+                    position: absolute;
+                    right: - 40px;
+                    height: 26px;
+                    width: 18px;
+                    top: 0;
+                    background: url(../images/renminbi-icon.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+            .detail-item {
+                padding-top: 14px;
+                line-height: 12px;
+                font-size: 12px;
+                @include flex();
+                .detail-name {
+                    width: 97px;
+                    padding-right: 22px;
+                    color: #c7c7c7;
+                    text-align: right;
+                }
+                .detail-text {
+                    flex: 1;
+                }
+            }
+            .detail-title {
+                font-size: 16px;
+                color: #1872d0;
+                padding-bottom: 10px;
+                text-align: center
+            }
+        }
         .list-item {
             margin-bottom: 16px;
             .list-select-name {
                 float: left;
                 width: 150px;
+                line-height: 31px;
                 text-align: right;
-                padding-left: 88px;
+                padding-right: 48px;
             }
             .select-box {
                 margin-left: 150px;
-                width: 680px;
+                max-width: 680px;
+                .active {
+                    border: 1px solid #267ad3;
+                    background: #f2f6f9;
+                    border-radius: 20px;
+                }
                 .item {
                     width: 108px;
+                    margin-bottom: 8px;
                     display: inline-block;
                     height: 31px;
                     line-height: 31px;
@@ -136,6 +381,19 @@ nav {
                     color: #000;
                     position: relative;
                     font-size: 14px;
+                    .text-c {
+                        position: relative;
+                    }
+                    .texttehui:after {
+                        content: '';
+                        height: 21px;
+                        width: 22px;
+                        background: url(../images/tehui.png) no-repeat center center;
+                        background-size: contain;
+                        right: -26px;
+                        top: -6px;
+                        position: absolute;
+                    }
                 }
             }
         }
