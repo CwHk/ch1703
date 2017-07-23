@@ -129,13 +129,84 @@ nav {
             .select-box {
                 margin-left: 150px;
                 max-width: 700px;
+                font-size: 14px;
+                .item-box {
+                    width: 172px;
+                    margin-right: 18px;
+                    float: left;
+                    .item {
+                        width: 172px;
+                        height: 172px;
+                        border: 1px solid #e8eaf9;
+                        position: relative;
+                        .close {
+                            position: absolute;
+                            height: 14px;
+                            width: 12px;
+                        }
+                    }
+                }
+                .choosebox:last-child {
+                    margin-right: 0;
+                }
+                .text-choose {
+                    line-height: 60px;
+                    font-size: 12px;
+                    float: left;
+                    color: #898989;
+                }
+                .choosebox:after {
+                    content: "";
+                    position: absolute;
+                    height: 32px;
+                    width: 35px;
+                    top: 0;
+                    right: 0;
+                    background: url(../images/go-bottom.png) no-repeat;
+                    background-position: center center;
+                    background-size: 12px 7px;
+                }
+                .choosebox {
+                    position: relative;
+                    float: left;
+                    margin-right: 18px;
+                }
+                .chooseboxs {
+                    width: 130px;
+                    height: 32px;
+                    background: #fff;
+                }
+                .chooseboxbig {
+                    width: 396px;
+                    height: 32px;
+                    margin-right: 0;
+                    position: relative;
+                    background: #fff;
+                }
+                .choosextdetai {
+                    width: 396px;
+                    height: 32px;
+                    padding: 0 13px;
+                    border-radius: 0;
+                    border: 1px solid #e8e9f8;
+                    position: absolute;
+                    background: transparent;
+                    z-index: 12;
+                    appearance: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                }
                 .choosext {
                     width: 130px;
                     height: 32px;
                     padding: 0 13px;
                     border-radius: 0;
                     border: 1px solid #e8e9f8;
-                    position: relative;
+                    position: absolute;
+                    top: 0;
+                    background: transparent;
+                    z-index: 12;
+                    left: 0;
                     appearance: none;
                     -moz-appearance: none;
                     -webkit-appearance: none;
