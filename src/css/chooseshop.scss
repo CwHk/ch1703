@@ -104,11 +104,19 @@ nav {
     }
 }
 
-.xi-onfig {
+body {
     background: #f8f8f8;
+}
+
+.huifg {
+    background: url(../images/huifenge.png) no-repeat center bottom;
+    background-size: contain;
+}
+
+.xi-onfig {
     .configtext {
-        margin-top: 44px;
-        margin-bottom: 28px;
+        padding-top: 44px;
+        padding-bottom: 28px;
         text-align: center;
         font-size: 32px;
         line-height: 32px;
@@ -118,7 +126,6 @@ nav {
     .configbox {
         position: relative;
         .choose-item {
-            margin-bottom: 32px;
             .list-select-name {
                 float: left;
                 width: 150px;
@@ -134,15 +141,65 @@ nav {
                     width: 172px;
                     margin-right: 18px;
                     float: left;
+                    .text-zd {
+                        text-align: center;
+                        font-size: 14px;
+                        padding-top: 23;
+                        padding-bottom: 34px;
+                    }
                     .item {
                         width: 172px;
                         height: 172px;
                         border: 1px solid #e8eaf9;
                         position: relative;
+                        background: #fff;
+                        .jiabck {
+                            height: 54px;
+                            background: url(../images/jia.png) no-repeat center center;
+                            background-size: 30px 30px;
+                        }
                         .close {
                             position: absolute;
+                            background: url(../images/close.png) no-repeat center center;
+                            background-size: contain;
+                            top: 12px;
+                            right: 11px;
                             height: 14px;
+                            z-index: 10;
                             width: 12px;
+                        }
+                        .box-text-detail-bottom {
+                            text-align: center;
+                            font-size: 12px;
+                            color: #c7c7c7;
+                            line-height: 36px;
+                        }
+                        .inputbox {
+                            width: 130px;
+                            height: 32px;
+                            background: #f0f2f5;
+                            margin: 0 auto;
+                            input {
+                                display: block;
+                                background: #f0f2f5;
+                                height: 100%;
+                                padding: 0 11px;
+                                text-align: right;
+                                font-size: 14px;
+                                width: 100%;
+                                border: 0;
+                            }
+                        }
+                        .icobxox {
+                            height: 93px;
+                            width: 172px;
+                            @include flex();
+                            @include align-items(center);
+                            @include justify-content (center);
+                            img {
+                                height: 49px;
+                                width: 37px;
+                            }
                         }
                     }
                 }
@@ -217,13 +274,15 @@ nav {
 }
 
 .jiqi-back {
-    background: url(../images/jiqi.png);
+    background: url(../images/jiqi.png) no-repeat;
+    background-position: 87% 17%;
 }
 
 .basic-configuration {
+    background: #fff;
     .configtext {
-        margin-top: 44px;
-        margin-bottom: 28px;
+        padding-top: 44px;
+        padding-bottom: 28px;
         text-align: center;
         font-size: 32px;
         line-height: 32px;
