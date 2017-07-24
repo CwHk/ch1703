@@ -29,3 +29,24 @@
     -moz-box-align: $align-items;
     -webkit-box-align: $align-items;
 }
+
+
+@media (min-width: 768px){
+    .cpys_flexBox {
+        width: 750px;
+    }
+}
+@media (min-width: 992px){
+    .cpys_flexBox {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    .cpys_flexBox {
+        width: 1170px;    
+    }   
+}
+.cpys_flexBox {
+    margin-right: auto;
+    margin-left: auto;
+}

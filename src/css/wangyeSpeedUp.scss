@@ -241,16 +241,14 @@ section{
 		height: 600px;
 		background:transparent url('../images/dianbo/cpysbg.png') left top no-repeat;
 		background-size: 100% 100%;
-		.container{
-			// @include flex();
-			padding-left: -15px;
-			padding-right: -15px;
+		.cpys_flexBox{
+			height: 600px;
+			@include flex();
+			@include justify-content(space-between);
+			@include align-items(center);
 			div.box{
-				// flex: 1;
 				height: 300px;
 				width: 285px;
-				float: left;
-				margin-right: 10px;
 				padding-top: 60px;
 				background-color: #fff;
 				.img{
