@@ -273,6 +273,10 @@ body {
     }
 }
 
+.xi-onfigs {
+    padding-top: 38px;
+}
+
 .jiqi-back {
     background: url(../images/jiqi.png) no-repeat;
     background-position: 78% 17%;
@@ -295,10 +299,25 @@ body {
     }
     .schedule {
         padding-bottom: 10px;
+        .th-icon {
+            position: absolute;
+            top: -40px;
+            height: 25px;
+            width: 37px;
+            background: url(../images/tehui.png) no-repeat center center;
+            background-size: contain;
+        }
         .shpcarj {
             position: relative;
             height: 36px;
             margin: 10px 0;
+            text-align: right;
+            .text-detail {
+                font-size: 12px;
+                line-height: 20px;
+                color: #1872d0;
+                text-align: right;
+            }
             .box-s {
                 position: absolute;
                 right: -2%;
@@ -360,6 +379,38 @@ body {
             .config-h {
                 border: 2px solid #a0a0a0;
             }
+            .config002 {
+                position: absolute;
+                left: 12.5%;
+            }
+            .config003 {
+                position: absolute;
+                left: 25%;
+            }
+            .config004 {
+                position: absolute;
+                left: 37.5%;
+            }
+            .config005 {
+                position: absolute;
+                left: 50%;
+            }
+            .config006 {
+                position: absolute;
+                left: 62.5%;
+            }
+            .config007 {
+                position: absolute;
+                left: 75%;
+            }
+            .config008 {
+                position: absolute;
+                left: 87.5%;
+            }
+            .config009 {
+                position: absolute;
+                left: 99.999999%;
+            }
             .config1 {
                 position: absolute;
                 left: -3px;
@@ -386,7 +437,7 @@ body {
             }
             .config04 {
                 position: absolute;
-                left: 24%;
+                left: 25%;
             }
             .config5 {
                 position: absolute;
