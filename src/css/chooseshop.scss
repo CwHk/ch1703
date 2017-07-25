@@ -275,7 +275,8 @@ body {
 
 .jiqi-back {
     background: url(../images/jiqi.png) no-repeat;
-    background-position: 87% 17%;
+    background-position: 78% 17%;
+    background-size: 39% 100%;
 }
 
 .basic-configuration {
@@ -288,6 +289,55 @@ body {
         line-height: 32px;
         background: url(../images/zhuangshitiao.png) no-repeat center center;
         background-size: contain;
+    }
+    .schedule {
+        padding-bottom: 10px;
+        .schedule-item {
+            margin-left: 150px;
+            max-width: 890px;
+            .config-q {
+                position: relative;
+                height: 18px;
+                width: 18px;
+                background: #fff;
+                position: absolute;
+                border-radius: 100%;
+                border: 2px solid #1873d0;
+            }
+            .config1 {
+                position: absolute;
+                left: -1px;
+                top: -7px;
+            }
+            .config2 {
+                position: absolute;
+                left: 16.6666666%;
+                top: -7px;
+            }
+            .schedule-config {
+                width: 100%;
+                height: 8px;
+                border: 1px solid #a0a0a0;
+                position: relative;
+                margin-top: 11px;
+                .schedule-config-l {
+                    position: absolute;
+                    width: 83.333333%;
+                    height: 10px;
+                    left: -1px;
+                    background: url(../images/jindutiao.png) no-repeat center center;
+                    background-size: cover;
+                    top: -2px;
+                }
+            }
+        }
+        .schedule-name {
+            float: left;
+            width: 150px;
+            line-height: 31px;
+            text-align: right;
+            padding-right: 48px;
+        }
     }
     .configbox {
         position: relative;
