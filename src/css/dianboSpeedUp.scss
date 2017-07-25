@@ -197,13 +197,14 @@ section{
 		.row{
 			height: 280px;
 			padding: 30px 0;
-			background-color: #f9f9f9;
+			background-color: rgba(249,249,249,0.6);
 			z-index: 310;
 			@include flex();
 			@include flex-wrap(nowrap);
 			h4{
 				color: #2f80d5;
 				font-size: 24px;
+				margin-bottom: 0;
 			}
 			ul{
 				
@@ -212,12 +213,13 @@ section{
 					height: 48px;
 					line-height: 48px;
 					font-size: 14px;
-					color: #191919;
+					color: #6f6f6f;
 					list-style-type: disc;
 				}
 			}
 			.left{
 				@include flex3(3);
+
 			}
 			.center{
 				@include flex3(4);
@@ -226,11 +228,20 @@ section{
 			.right{
 				@include flex3(4);
 			}
+			.leftBox{
+				width: 160px;
+				margin-left: 30px;
+			}
 		}
 		.row.active{
 			background-color: #fff;
-			box-shadow: 0px 0px 10px 1px #1872d0;
-			z-index: 320;
+			box-shadow: 0px 0px 10px 2px #ccc;
+			z-index: 420;
+			ul{
+				li{
+					color: #191919;
+				}
+			}
 		}
 	}
 	.cpys_title{

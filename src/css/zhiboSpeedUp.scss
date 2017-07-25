@@ -196,12 +196,18 @@ section{
 		background-size: 100% 100%;
 		.row{
 			height: 280px;
-			padding: 36px 0;
-			background-color: #f9f9f9;
+			padding: 30px 0;
+			background-color: rgba(249,249,249,0.6);
 			z-index: 310;
+			@include flex();
+			@include flex-wrap(nowrap);
 			h4{
 				color: #2f80d5;
 				font-size: 24px;
+				margin-bottom: 0;
+			}
+			h4.nopadtop{
+				margin-top: 0;
 			}
 			ul{
 				li{
@@ -212,16 +218,25 @@ section{
 					list-style-type: disc;
 				}
 			}
+			.left{
+				@include flex3(3);
+
+			}
 			.center{
-				ul{
-					padding-left: 40px;
-					font-size: 14px;
-				}
+				@include flex3(4);
+				padding: 10px 0;
+			}
+			.right{
+				@include flex3(4);
+			}
+			.leftBox{
+				width: 160px;
+				margin-left: 30px;
 			}
 		}
 		.row.active{
 			background-color: #fff;
-			box-shadow: 0px 0px 10px 1px #1872d0;
+			box-shadow: 0px 0px 10px 2px #ccc;
 			z-index: 320;
 			ul{
 				li{
