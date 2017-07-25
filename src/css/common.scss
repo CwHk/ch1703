@@ -88,3 +88,22 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+// 轮播图分页小圆点样式
+.banner-box .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 122px;
+    z-index: 666;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 22px;
+}
+.banner-box .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    background: transparent;
+    opacity: 1;
+}
+.swiper-container .swiper-pagination-bullet-active {
+    background: #fff;
+}

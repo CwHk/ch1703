@@ -345,6 +345,13 @@
 <script src="../js/swiper.min.js"></script>
 <script src="../js/dianboSpeedUp.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: 3000,
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
     $('nav a').on("click", function() {
         if(!$(this).hasClass('active')){
             $(this).addClass("active");
@@ -353,6 +360,14 @@
         }else{
             $(this).removeClass("active");
             $(this).find('.toggle_box').hide();
+        }
+    });
+    $('.jjfa').on('mouseover','.row',function(){
+        if(!$(this).hasClass('active')){
+            $(this).addClass("active");
+            $(this).siblings().removeClass('active');
+        }else{
+            $(this).siblings().removeClass('active');
         }
     })
 </script>
