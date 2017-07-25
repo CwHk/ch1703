@@ -150,76 +150,76 @@
         <div class="jrlc">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-2 col-xs-2 text-center">
+                    <div class="col-sm-2 col-xs-2 left">
                         <div><img src="../images/p2p/tjsq.png"></div>
                         <h4 class="text-center">提交申请</h4>
                     </div>
-                    <div class="col-sm-8 col-xs-8 text-center">
+                    <div class="col-sm-8 col-xs-8 center">
                         <ul>
                             <li>在“联系我们”中填写相关服务申请或电话、QQ联系我们</li>
                         </ul>
                     </div>
-                    <div class="col-sm-2 col-xs-2 text-center">
+                    <div class="col-sm-2 col-xs-2 right">
                         <div><img src="../images/p2p/xiajiantou.png"></div>
                     </div>
                 </div>
                 <div class="bottom_line"></div>
                 <div class="row">
-                    <div class="col-sm-2 col-xs-2 text-center">
+                    <div class="col-sm-2 col-xs-2 left">
                         <div><img src="../images/p2p/sqfk.png"></div>
                         <h4 class="text-center">申请反馈</h4>
                     </div>
-                    <div class="col-sm-8 col-xs-8 text-center">
+                    <div class="col-sm-8 col-xs-8 center">
                         <ul>
                             <li>专业顾问第一时间主动联系您，提供咨询以及售前服务</li>
                         </ul>
                     </div>
-                    <div class="col-sm-2 col-xs-2 text-center">
+                    <div class="col-sm-2 col-xs-2 right">
                         <div><img src="../images/p2p/xiajiantou.png"></div>
                     </div>
                 </div>
                 <div class="bottom_line"></div>
                 <div class="row">
-                    <div class="col-sm-2 col-xs-2 text-center">
+                    <div class="col-sm-2 col-xs-2 left">
                         <div><img src="../images/p2p/jrfw.png"></div>
                         <h4 class="text-center">接入服务</h4>
                     </div>
-                    <div class="col-sm-8 col-xs-8 text-center">
+                    <div class="col-sm-8 col-xs-8 center">
                         <ul>
                             <li>全场提供在线技术支持，帮助客服接入云奥云服务的加速服务</li>
                         </ul>
                     </div>
-                    <div class="col-sm-2 col-xs-2 text-center">
+                    <div class="col-sm-2 col-xs-2 right">
                         <div><img src="../images/p2p/xiajiantou.png"></div>
                     </div>
                 </div>
                 <div class="bottom_line"></div>
                 <div class="row">
-                    <div class="col-sm-2 col-xs-2 text-center">
+                    <div class="col-sm-2 col-xs-2 left">
                         <div><img src="../images/p2p/cssx.png"></div>
                         <h4 class="text-center">测试上线</h4>
                     </div>
-                    <div class="col-sm-8 col-xs-8 text-center">
+                    <div class="col-sm-8 col-xs-8 center">
                         <ul>
                             <li>测试发布带有云奥P2P的SDK应用、播放器等，提供无缝播放体验</li>
                         </ul>
                     </div>
-                    <div class="col-sm-2 col-xs-2 text-center">
+                    <div class="col-sm-2 col-xs-2 right">
                         <div><img src="../images/p2p/xiajiantou.png"></div>
                     </div>
                 </div>
                 <div class="bottom_line"></div>
                 <div class="row">
-                    <div class="col-sm-2 col-xs-2 text-center">
+                    <div class="col-sm-2 col-xs-2 left">
                         <div><img src="../images/p2p/kfhtqx.png"></div>
                         <h4 class="text-center">开放后台权限</h4>
                     </div>
-                    <div class="col-sm-8 col-xs-8 text-center">
+                    <div class="col-sm-8 col-xs-8 center">
                         <ul>
                             <li>您将获得一个云奥账号，登录系统后台即可配置服务、查看流量、带宽等数据</li>
                         </ul>
                     </div>
-                    <div class="col-sm-2 col-xs-2 text-center">
+                    <div class="col-sm-2 col-xs-2 right">
                         <div><img src="../images/p2p/duigou.png"></div>
                     </div>
                 </div>
@@ -268,8 +268,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 col-sm-offset-3 text-center">
+                <div class="col-sm-3 col-sm-offset-3 text-center right">
                     <img src="../images/wxsys.png">
+                    <div class="vText">扫一扫关注我们</div>
                 </div>
             </div>
         </div>
@@ -299,9 +300,14 @@
 <script src="../js/dianboSpeedUp.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     $('nav a').on("click", function() {
-        $(this).addClass("active");
-        $(this).find('.toggle_box').show();
-        $(this).siblings('a').removeClass('active').find('.toggle_box').hide();
+        if(!$(this).hasClass('active')){
+            $(this).addClass("active");
+            $(this).find('.toggle_box').show();
+            $(this).siblings('a').removeClass('active').find('.toggle_box').hide();
+        }else{
+            $(this).removeClass("active");
+            $(this).find('.toggle_box').hide();
+        }
     })
 </script>
 

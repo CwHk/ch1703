@@ -64,7 +64,7 @@ nav{
 		    background-size: cover;
 		}
 		.toggle_box{
-			display: none;
+			display: block;
 			width: 186px;
 			height: 288px;
 			position: absolute;
@@ -201,6 +201,10 @@ section{
 			div[class*='col-']{
 				padding-top: 0px;
 				height: 180px;
+				@include flex();
+				@include align-items(center);
+				@include align-content(center);
+				@include flex-wrap(wrap);
 				h4{
 					font-size: 24px;
 					color: #2f80d5;
@@ -211,8 +215,15 @@ section{
 					li{
 						font-size: 16px;
 						color: #191919;
+						list-style-type: disc;
 					}
 				}
+			}
+			div.left,div.right{
+				@include justify-content(center);
+			}
+			div.center{
+				padding-left: 110px;
 			}
 		}
 		.bottom_line{

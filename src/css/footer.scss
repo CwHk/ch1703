@@ -13,6 +13,9 @@ footer {
     padding-bottom: 24px;
     color: #181818;
     border-bottom: 1px solid #636363;
+    div{
+        cursor: pointer;
+    }
 }
 
 .left_con {
@@ -28,6 +31,32 @@ footer {
 
 .left_con p {
     margin-top: 14px;
+}
+
+.footer_top .right{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -moz-box-pack: center;
+    -webkit--moz-box-pack: center;
+    box-pack: center;
+    align-items: center;
+    -webkit-align-items: center;
+    box-align: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+
+.footer_top .right .vText{
+    width:20px;
+    margin-left: 30px;
+    line-height:16px;
+    font-size: 16px;
+    text-align: center;
 }
 
 .footer_bottom {

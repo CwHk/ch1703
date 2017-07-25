@@ -228,8 +228,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 col-sm-offset-3 text-center">
+                <div class="col-sm-3 col-sm-offset-3 text-center right">
                     <img src="../images/wxsys.png">
+                    <div class="vText">扫一扫关注我们</div>
                 </div>
             </div>
         </div>
@@ -259,9 +260,14 @@
 <script src="../js/dianboSpeedUp.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     $('nav a').on("click", function() {
-        $(this).addClass("active");
-        $(this).find('.toggle_box').show();
-        $(this).siblings('a').removeClass('active').find('.toggle_box').hide();
+        if(!$(this).hasClass('active')){
+            $(this).addClass("active");
+            $(this).find('.toggle_box').show();
+            $(this).siblings('a').removeClass('active').find('.toggle_box').hide();
+        }else{
+            $(this).removeClass("active");
+            $(this).find('.toggle_box').hide();
+        }
     })
 </script>
 
