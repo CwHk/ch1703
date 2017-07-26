@@ -397,10 +397,28 @@
         <div class="xi-onfig xi-onfigs">
             <div class="huifg">
                 <div class="container">
-                    <div class="schedule-name">
-                        宽带
+                    <div class="itemboxs clearfix">
+                        <div class="l-name">
+                            登录类型
+                        </div>
+                        <div class="choose-let">
+                            <div class="itemsbtn active">设置密码</div>
+                            <div class="itemsbtn">自动生成密码</div>
+                            <div class="ptop-text-detail">请记住您所设置的密码。如果遗忘，可登录云服务器控制平台进行密码重制</div>
+                        </div>
                     </div>
-                    <div class="choose-let"></div>
+                    <div class="itemboxs clearfix">
+                        <div class="l-name">
+                            登录密码
+                        </div>
+                        <div class="choose-let">
+                            <div class="inp-text"><input type="text" placeholder="8～30个字符，包含大小写和字母，不支持特殊符号"></div>
+
+                            <div class="inp-texts"></div>
+                            <div class="ptop-text-detail">Linux机器密码需要8～16位，至少包括两项（a - z、A - Z、0 - 9、【 ~!@#$%^&*()-=_
+                                <>? 】）</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -484,6 +502,10 @@
     $('.select-box .item').on("click", function() {
         $(this).addClass("active")
         $(this).siblings('.item').removeClass('active');
+    })
+    $('.choose-let .itemsbtn').click(function() {
+        $(this).addClass("active");
+        $(this).siblings().removeClass('active')
     })
 </script>
 

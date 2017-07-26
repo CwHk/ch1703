@@ -641,3 +641,36 @@ body {
         }
     }
 }
+
+.l-name {
+    float: left;
+    width: 150px;
+    line-height: 31px;
+    color: #898989;
+    text-align: right;
+    padding-right: 48px;
+}
+
+.choose-let {
+    margin-left: 150px;
+    max-width: 890px;
+    .itemsbtn {
+        padding: 0 26px;
+        line-height: 33px;
+        font-size: 14px;
+        float: left;
+    }
+    .active {
+        border: 1px solid #1872d0;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+    .ptop-text-detail {
+        float: left;
+        width: 100%;
+        font-size: 12px;
+        height: 57px;
+        color: #898989;
+        line-height: 57px;
+    }
+}
