@@ -48,7 +48,7 @@ gulp.task('fonts', function() {
 
 gulp.task('sass', function() {
     return gulp.src('src/css/**/*')
-        .pipe(sass().on('error',sass.logError)) //用gulp-sass插件编译scss到css
+        .pipe(sass().on('error', sass.logError)) //用gulp-sass插件编译scss到css
         .pipe(gulp.dest('dist/css'))
         // .pipe(minifyCSS()) //最小化css
         // .pipe(rename('main.min.css')) //重命名css

@@ -21,6 +21,9 @@
                     <a class="logo" href="javascript:void(0)">
                         <img src="../images/lLogo.png" alt="">
                     </a>
+                    <div class="phone">
+                        服务热线：400 - 000 000
+                    </div>
                 </div>
                 <div class="col-sm-6 col-xs-6 phonebox">
                     <div class="row">
@@ -32,10 +35,19 @@
         </div>
     </header>
     <nav>
-        <div class="container">
-            <a href="javascript:;">首页</a>
-            <a href="javascript:;" class="active">云服务器</a>
-            <a href="javascript:;">CND</a>
+        <div class="container navcantainer">
+            <a href="javascript:;" class="active">首页</a>
+            <a href="javascript:;">云服务器</a>
+            <a href="javascript:;">CND
+                <div class="toggle_box">
+                    <div class="item">直播加速</div>
+                    <div class="item active">点播加速</div>
+                    <div class="item">网页加速</div>
+                    <div class="item">下载加速</div>
+                    <div class="item">P2P加速</div>
+                    <div class="item">流媒体引擎</div>
+                </div>
+            </a>
             <a href="javascript:;">服务器租用与托管</a>
             <a href="javascript:;">高防</a>
         </div>
@@ -464,9 +476,10 @@
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
 <script type="text/javascript">
-    $('nav a').on("click", function() {
+    $(".navcantainer a").mouseover(function() {
+        $(this).find('.toggle_box').show();
         $(this).addClass("active")
-        $(this).siblings('a').removeClass('active');
+        $(this).siblings('a').removeClass('active').find('.toggle_box').hide();
     })
     $('.select-box .item').on("click", function() {
         $(this).addClass("active")
