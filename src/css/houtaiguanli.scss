@@ -1,0 +1,69 @@
+@import "common";
+
+
+header {
+    width: 100%;
+    min-width: 1920;
+    background: #f2f2f2;
+    .header-box {
+    	height: 60px;
+	    background: url(../images/fenge.png) no-repeat;
+	    background-size: 100% 2px;
+	    background-position: center bottom;
+	    .logobox{
+	    	float: left;
+	    	margin-top: 6px;
+	    	margin-left: 20px;
+	    }
+	    .rightBox{
+	    	float: right;
+	    	width: 290px;
+	    	line-height: 60px;
+	    	color: #2d7fd3;
+	    	margin-right: 73px;
+	    	.userName{
+	    		margin-left: 42px;
+	    	}
+	    	.exit{
+	    		margin-left: 52px;
+	    	}
+	    }
+	}
+}
+
+section{
+	min-width: 1920px;
+	height: 1103px;
+	@include flex();
+	.contain_left{
+		width: 220px;
+		height: 100%;
+		@include flex3(1 0 auto);
+		background: #161c26;
+		.setting{
+			height: 22px;
+			width: 22px;
+			margin-left: 178px;
+			margin-top: 22px;
+			background:transparent url('../images/houtaiguanli/shezhi.png') left top no-repeat;
+			background-size: cover;
+			margin-bottom: 20px;
+		}
+		.userInfo{
+			height: 80px;
+			margin-left: 20px;
+			color: #e8e9ea;
+			img{
+				float: left;
+			}
+			.rightBox{
+				float: left;
+			}
+		}
+	}
+	.contain_right{
+		width: 1700px;
+		height: 100%;
+		@include flex3(1 0 auto);
+	}
+}

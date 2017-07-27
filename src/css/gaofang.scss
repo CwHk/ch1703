@@ -1,0 +1,257 @@
+@import "common";
+@import "./header.css";
+@import "./footer.css";
+
+.swiper-container {
+    width: 100%;
+    height: 650px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+
+h3 {
+    background: url('../images/zhuangshitiao.png') no-repeat 0 center;
+    background-size: contain;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+nav{
+	width: 100%;
+	height: 73px;
+	margin-top: 72px;
+	background:transparent url('../images/dianbo/nav_bg.png') no-repeat;
+	.container{
+		margin: 0 auto;
+        height: 73px;
+        line-height: 73px;
+        padding: 0 70px;
+        text-align: center;
+        @include flex();
+		a{
+			height: 62px;
+            flex: 1;
+			font-size: 16px;
+			color: #181818;
+			text-decoration: none;
+			cursor: pointer;
+			position: relative;
+		}
+		a.active{
+			color: #1872d0;
+		}
+		a.active:after{
+			content: '';
+		    position: absolute;		    
+		    height: 4px;
+		    width: 32px;
+		    border-radius: 2px;
+		    bottom: 2px;
+		    left: calc(50% - 16px);
+		    background-image: url('../images/dianbo/nav_xzk.png');
+		    background-size: cover;
+		}
+		.toggle_box{
+			display: block;
+			width: 186px;
+			height: 288px;
+			position: absolute;
+			left: -17px;
+			top: 84px;
+			background: #fff;
+			text-align: left;
+			z-index: 299;
+			div{
+				height: 48px;
+				line-height: 48px;
+				padding:0 20px;
+				color: #666;
+				font-size: 14px;
+			}
+			div.active{
+				color: #000;
+				background: #f2f6f9;
+				position: relative;
+			}
+			div.active:after{
+				content: '';
+			    position: absolute;		    
+			    height: 12px;
+			    width: 12px;
+			    border-radius: 100%;
+			    background: #1872d0;
+			    top: calc(50% - 6px);
+			    right: 20px;
+			}
+		}
+	}
+}
+section{
+	.banner-box{
+		height: 650px;
+		position: relative;
+
+	}
+	.yagf_title{
+		height: 700px;
+		.top_bg{
+			margin-top: 40px;
+			height: 456px;
+			background:transparent url('../images/gaofang/CTSbg.png') top center no-repeat;
+			background-size: contain;
+		}
+		h3{
+			margin-top: 36px;
+			margin-bottom: 16px;
+			background: transparent;
+			font-size: 32px;
+			color: #333;
+		}
+		p{
+			font-size: 24px;
+			color: #333;
+			text-align: center;
+			.color{
+				color: #1872d0;
+			}
+		}
+	}
+	.cpys{
+		height: 550px;
+		background: #f8f8f8 url('../images/gaofang/cpysbgywz.png') center no-repeat;
+	}
+	.cptd_title,.gfcpjs_title{
+		h3{
+			margin-top: 48px;
+			margin-bottom: 48px;
+			color: #000;
+		}
+	}
+	.cptd{
+		width: 100%;
+		height: 600px;
+		background:transparent url('../images/dianbo/cpysbg.png') left top no-repeat;
+		background-size: 100% 100%;
+		.cpys_flexBox{
+			height: 600px;
+			@include flex();
+			@include justify-content(space-between);
+			@include align-items(center);
+			div.box{
+				height: 300px;
+				width: 285px;
+				padding-top: 40px;
+				background-color: #fff;
+				h5{
+					color: #2f80d5;
+					font-size: 18px;
+					margin-top: 30px;
+					font-weight: 600;
+				}
+				p{
+					color: #666;
+					font-size: 18px;
+					line-height: 24px;
+					margin-bottom: 0;
+				}
+			}
+			div:last-child{
+				margin-right: 0;
+			}	
+		}		
+	}
+	.gfcpjs{
+		height: 415px;
+		ul{
+			li{
+				height: 65px;
+				position: relative;
+				border-bottom: 1px solid #1872d0;
+				@include flex();
+				@include align-items(center);
+				span{
+					@include flex3(1 1 170px);
+					text-align: center;
+					font-size: 16px;
+					color: #333;
+				}
+				span.buy{
+					display: block;
+					width: 130px;
+					height: 30px;
+					line-height: 30px;
+					margin: auto;
+					cursor: pointer;
+					border: 1px solid #1872d0;
+				}
+				span.color,span.saleMore{
+					color: #1872d0;
+				}
+				span.saleMore{
+					cursor: pointer;
+				}
+			}
+			.kfBox{
+				position: absolute;
+				right: 0;
+				top: -1px;
+				width: 300px;
+				height: 80px;
+				padding-left: 20px;
+				background: #fff;
+				box-shadow: 0 0 10px 2px #eff1ff;
+				cursor: pointer;
+				span{
+					font-weight: 600;
+					margin-left: 60px;
+					font-size: 16px;
+					color: #333;
+				}
+			}
+			li.title{
+				height: 50px;
+				background: #f8f8f8;
+				border-bottom: none;
+				span{
+					font-size: 16px;
+					color: #333;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	.yagf_bottom{
+		height: 200px;
+		background:transparent url('../images/gaofang/yagf_bottom.png') left top no-repeat;
+		background-size: 100% 100%;
+	}
+	.gf_feature{
+		height: 175px;
+		ul{
+			height: 175px;
+			margin-bottom: 0;
+			@include flex();
+			@include justify-content(space-around);
+			@include align-items(center);
+			li{
+				height: 80px;
+				line-height: 80px;
+				text-align: center;
+				border-right: 2px solid #b5c0cb;
+				@include flex3(1 1 180px);
+				span{
+					font-size: 20px;
+					font-weight: 700;
+					color: #4c4c4c;
+				}
+			}
+			li:last-child{
+				border: none;
+			}
+		}
+	}
+}
