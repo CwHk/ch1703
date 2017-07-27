@@ -37,8 +37,9 @@ nav {
         .toggle_box {
             width: 186px;
             height: 288px;
+            display: none;
             position: absolute;
-            left: -17px;
+            left: 12px;
             top: 84px;
             background: #fff;
             text-align: left;
@@ -273,6 +274,10 @@ body {
     }
 }
 
+.xi-onfigs {
+    padding-top: 38px;
+}
+
 .jiqi-back {
     background: url(../images/jiqi.png) no-repeat;
     background-position: 78% 17%;
@@ -290,8 +295,75 @@ body {
         background: url(../images/zhuangshitiao.png) no-repeat center center;
         background-size: contain;
     }
+    .schde-f {
+        padding-bottom: 35px;
+    }
     .schedule {
         padding-bottom: 10px;
+        .th-icon {
+            position: absolute;
+            top: -40px;
+            height: 25px;
+            width: 37px;
+            background: url(../images/tehui.png) no-repeat center center;
+            background-size: contain;
+        }
+        .shpcarj {
+            position: relative;
+            height: 36px;
+            margin: 10px 0;
+            text-align: right;
+            .text-detail {
+                font-size: 12px;
+                line-height: 20px;
+                color: #1872d0;
+                text-align: right;
+            }
+            .box-s {
+                position: absolute;
+                right: -2%;
+                top: 4px;
+                border: 1px solid #f0f2f5;
+                @include flex();
+                width: 185px;
+                height: 32px;
+                .jian {
+                    height: 30px;
+                    width: 44px;
+                    text-align: center;
+                    background: #fff;
+                    color: #1873d0;
+                    line-height: 26px;
+                    font-size: 29px;
+                }
+                .jia {
+                    height: 30px;
+                    width: 44px;
+                    text-align: center;
+                    background: #fff;
+                    color: #1873d0;
+                    line-height: 26px;
+                    font-size: 29px;
+                }
+                .inp {
+                    width: 97px;
+                    height: 30px;
+                    input {
+                        width: 97px;
+                        padding: 0 5px;
+                        height: 30px;
+                        border: 0;
+                        background: #f0f2f5;
+                        ;
+                    }
+                }
+            }
+        }
+        .num-text {
+            height: 47px;
+            padding-top: 24px;
+            position: relative;
+        }
         .schedule-item {
             margin-left: 150px;
             max-width: 890px;
@@ -302,17 +374,125 @@ body {
                 background: #fff;
                 position: absolute;
                 border-radius: 100%;
+                top: -7px;
                 border: 2px solid #1873d0;
+            }
+            .config-h {
+                border: 2px solid #a0a0a0;
+            }
+            .config002 {
+                position: absolute;
+                left: 12.5%;
+            }
+            .config003 {
+                position: absolute;
+                left: 25%;
+            }
+            .config004 {
+                position: absolute;
+                left: 37.5%;
+            }
+            .config005 {
+                position: absolute;
+                left: 50%;
+            }
+            .config006 {
+                position: absolute;
+                left: 62.5%;
+            }
+            .config007 {
+                position: absolute;
+                left: 75%;
+            }
+            .config008 {
+                position: absolute;
+                left: 87.5%;
+            }
+            .config009 {
+                position: absolute;
+                left: 99.999999%;
             }
             .config1 {
                 position: absolute;
-                left: -1px;
-                top: -7px;
+                left: -3px;
             }
             .config2 {
                 position: absolute;
                 left: 16.6666666%;
-                top: -7px;
+            }
+            .config02 {
+                position: absolute;
+                left: 8.33333%;
+            }
+            .config3 {
+                position: absolute;
+                left: 33.33333333%;
+            }
+            .config03 {
+                position: absolute;
+                left: 16.6666667%;
+            }
+            .config4 {
+                position: absolute;
+                left: 50%;
+            }
+            .config04 {
+                position: absolute;
+                left: 25%;
+            }
+            .config5 {
+                position: absolute;
+                left: 66.66666666666%;
+            }
+            .config05 {
+                position: absolute;
+                left: 33.33333333%;
+            }
+            .config6 {
+                position: absolute;
+                left: 83.333333333%;
+            }
+            .config06 {
+                position: absolute;
+                left: 41.6666667%
+            }
+            .config7 {
+                position: absolute;
+                left: 99.99999%;
+            }
+            .config07 {
+                position: absolute;
+                left: 50%;
+            }
+            .config08 {
+                position: absolute;
+                left: 58.333333%;
+            }
+            .config09 {
+                position: absolute;
+                left: 66.666667%;
+            }
+            .config10 {
+                position: absolute;
+                left: 75%;
+            }
+            .config11 {
+                position: absolute;
+                left: 83.333333%;
+            }
+            .config12 {
+                position: absolute;
+                left: 91.666667%;
+            }
+            .config13 {
+                position: absolute;
+                left: 99.99999%;
+            }
+            .text2 {
+                left: 99%;
+            }
+            .text3 {
+                left: 82.333333333%;
             }
             .schedule-config {
                 width: 100%;
@@ -320,9 +500,18 @@ body {
                 border: 1px solid #a0a0a0;
                 position: relative;
                 margin-top: 11px;
+                .schedule-config-l1 {
+                    position: absolute;
+                    width: 51%;
+                    height: 10px;
+                    left: -1px;
+                    background: url(../images/jindutiao.png) no-repeat center center;
+                    background-size: cover;
+                    top: -2px;
+                }
                 .schedule-config-l {
                     position: absolute;
-                    width: 83.333333%;
+                    width: 83.86533333%;
                     height: 10px;
                     left: -1px;
                     background: url(../images/jindutiao.png) no-repeat center center;
@@ -338,6 +527,9 @@ body {
             text-align: right;
             padding-right: 48px;
         }
+    }
+    .schde-f {
+        padding-bottom: 35px;
     }
     .configbox {
         position: relative;
@@ -447,5 +639,38 @@ body {
                 }
             }
         }
+    }
+}
+
+.l-name {
+    float: left;
+    width: 150px;
+    line-height: 31px;
+    color: #898989;
+    text-align: right;
+    padding-right: 48px;
+}
+
+.choose-let {
+    margin-left: 150px;
+    max-width: 890px;
+    .itemsbtn {
+        padding: 0 26px;
+        line-height: 33px;
+        font-size: 14px;
+        float: left;
+    }
+    .active {
+        border: 1px solid #1872d0;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+    .ptop-text-detail {
+        float: left;
+        width: 100%;
+        font-size: 12px;
+        height: 57px;
+        color: #898989;
+        line-height: 57px;
     }
 }

@@ -63,8 +63,19 @@ header .container {
 .logo {
     width: 180px;
     height: 48px;
+    float: left;
     margin-top: 12px;
     display: block;
+}
+
+.phone {
+    float: right;
+    line-height: 70px;
+    padding-left: 28px;
+    color: #000;
+    background: url(../images/phoneblack.png) no-repeat left center;
+    background-size: 16px 20px;
+    font-size: 14px;
 }
 
 .bogobox {
