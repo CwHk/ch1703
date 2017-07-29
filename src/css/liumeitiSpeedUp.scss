@@ -32,19 +32,24 @@ nav{
         padding: 0 70px;
         text-align: center;
         @include flex();
-		a{
-			height: 62px;
+        >div{
+        	height: 62px;
             flex: 1;
 			font-size: 16px;
-			color: #181818;
-			text-decoration: none;
-			cursor: pointer;
-			position: relative;
-		}
-		a.active{
+			>a{
+				display: block;
+				text-decoration: none;
+				cursor: pointer;
+				color: #181818;
+			}
+        }
+        >div.CDN{
+        	position: relative;
+        }
+		>div.active>a{
 			color: #1872d0;
 		}
-		a.active:after{
+		>div.active:after{
 			content: '';
 		    position: absolute;		    
 		    height: 4px;
@@ -60,24 +65,27 @@ nav{
 			width: 186px;
 			height: 288px;
 			position: absolute;
-			left: -17px;
+			left: 10px;
 			top: 84px;
 			background: #fff;
 			text-align: left;
 			z-index: 299;
-			div{
+			a{
+				display: block;
 				height: 48px;
 				line-height: 48px;
 				padding:0 20px;
 				color: #666;
+				text-decoration: none;
 				font-size: 14px;
+				cursor: pointer;
 			}
-			div.active{
+			a.active{
 				color: #000;
 				background: #f2f6f9;
 				position: relative;
 			}
-			div.active:after{
+			a.active:after{
 				content: '';
 			    position: absolute;		    
 			    height: 12px;
