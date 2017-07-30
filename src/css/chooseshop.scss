@@ -660,6 +660,23 @@ body {
         font-size: 14px;
         float: left;
     }
+    .inp-text {
+        @include flex();
+        input {
+            width: 342px;
+            border: 0;
+            padding: 0 8px;
+            height: 32px;
+            font-size: 12px;
+            background: #f0f2f5;
+        }
+        .yes-icon {
+            width: 68px;
+            height: 32px;
+            background: url(../images/ye-icon.png) no-repeat center center;
+            background-size: 23px 15px;
+        }
+    }
     .active {
         border: 1px solid #1872d0;
         border-radius: 20px;
@@ -672,5 +689,53 @@ body {
         height: 57px;
         color: #898989;
         line-height: 57px;
+    }
+}
+
+.configbox-b {
+    padding: 34px 0 29px 0;
+    .leftname {
+        float: left;
+        width: 150px;
+        line-height: 31px;
+        color: #1872d0;
+        font-size: 16px;
+        text-align: right;
+        padding-right: 48px;
+    }
+    .configleft {
+        margin-left: 150px;
+        max-width: 890px;
+        @include flex();
+    }
+    .box-text {
+        width: 520px;
+        flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        -o-flex: 1;
+        @include flex();
+        .itemlistText {
+            @include flex();
+            padding-bottom: 8px;
+            line-height: 29px;
+            .name {
+                width: 82px;
+                font-size: 14px;
+                text-align: right;
+                padding-right: 22px;
+                color: #898989;
+            }
+            .text {
+                flex: 1;
+                -webkit-flex: 1;
+                -moz-flex: 1;
+                -ms-flex: 1;
+                -o-flex: 1;
+                font-size: 14px;
+                color: #000;
+            }
+        }
     }
 }
