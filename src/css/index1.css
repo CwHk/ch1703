@@ -84,7 +84,6 @@ header .container {
     line-height: 32px;
     text-align: center;
     margin-top: 22px;
-    margin-right: 80px;
 }
 
 .logo {
@@ -93,7 +92,6 @@ header .container {
     margin-top: 12px;
     float: left;
     display: block;
-    margin-left: 80px;
 }
 
 .phone {
@@ -138,7 +136,7 @@ nav .container {
     margin: 0 auto;
     height: 73px;
     line-height: 73px;
-    padding: 0 68px;
+    padding: 0 70px;
     text-align: center;
     display: -webkit-box;
     display: -moz-box;

@@ -47,7 +47,7 @@
                     <a href="liumeitiSpeedUp.html">流媒体引擎</a> 
                 </div>
             </div>
-            <div><a href="javascript:;">服务器租用与托管</a></div>
+            <div><a href="houtaiguanli.html">服务器租用与托管</a></div>
             <div><a href="gaofang.html">高防</a></div>
         </div>
     </nav>
@@ -267,16 +267,15 @@
         pagination: '.swiper-pagination',
         paginationClickable: true
     });
-    $('nav a').on("click", function() {
+    $('nav .CDN').on("click", function() {
         if(!$(this).hasClass('active')){
             $(this).addClass("active");
             $(this).find('.toggle_box').show();
-            $(this).siblings('a').removeClass('active').find('.toggle_box').hide();
         }else{
             $(this).removeClass("active");
             $(this).find('.toggle_box').hide();
         }
-    })
+    });
 </script>
 
 </html>

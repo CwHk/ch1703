@@ -37,7 +37,7 @@
             <a href="../index1.html">首页</a>
             <a href="chooseshop.html">云服务器</a>
             <a href="zhiboSpeedUp.html">CDN</a>
-            <a href="javascript:;">服务器租用与托管</a>
+            <a href="houtaiguanli.html">服务器租用与托管</a>
             <a href="javascript:;"  class="active">高防</a>
         </div>
     </nav>
@@ -76,7 +76,39 @@
         </div>
         <div class="container-fluid cpys">
             <div class="container">
-
+                <div class="left">
+                    <div class="left_top">
+                        <h4>秒封秒解</h4>
+                        <p>IP受到超过购买防御值时的攻击时秒封</p>
+                        <p class="last">当前攻击流量停止攻击后秒解</p>
+                    </div>
+                    <div class="left_bottom">
+                        <h4>策略定制</h4>
+                        <p>可为您的网站个性化定制各项防御策略</p>
+                        <p class="last">满足特殊业务的定制需求</p>
+                    </div>
+                </div>
+                <div class="center">
+                    <span>产品优势</span>
+                    <div class="top_left active"></div>
+                    <div class="top_right"></div>
+                    <div class="bottom_left"></div>
+                    <div class="bottom_right"></div>
+                </div>
+                <div class="right">
+                    <div class="right_top">
+                        <h4>安全防护</h4>
+                        <p>能够拦截各种纯流量的洪水攻击，包括SYN洪</p>
+                        <p>水、UDP洪水、NTP反射攻击等以及各种流量</p>
+                        <p>混合攻击</p>
+                        <p class="last">满足安全级别高的项目需求</p>
+                    </div>
+                    <div class="right_bottom">
+                        <h4>专业服务</h4>
+                        <p>7×24全天候专业售后团队，故障快速响应处</p>
+                        <p class="last">理，满足各项业务的服务需求</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container-fluid cptd_title">
@@ -256,16 +288,6 @@
         // 如果需要分页器
         pagination: '.swiper-pagination',
         paginationClickable: true
-    });
-    $('nav a').on("click", function() {
-        if(!$(this).hasClass('active')){
-            $(this).addClass("active");
-            $(this).find('.toggle_box').show();
-            $(this).siblings('a').removeClass('active').find('.toggle_box').hide();
-        }else{
-            $(this).removeClass("active");
-            $(this).find('.toggle_box').hide();
-        }
     });
 </script>
 

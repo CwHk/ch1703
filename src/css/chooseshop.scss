@@ -11,7 +11,7 @@ nav {
         line-height: 73px;
         text-align: center;
         @include flex();
-        a {
+        a{
             height: 62px;
             flex: 1;
             font-size: 16px;
@@ -19,6 +19,9 @@ nav {
             text-decoration: none;
             cursor: pointer;
             position: relative;
+        }
+        a:hover {
+            color: #1872d0;
         }
         a.active {
             color: #1872d0;
@@ -707,6 +710,57 @@ body {
         margin-left: 150px;
         max-width: 890px;
         @include flex();
+        .rightBox{
+            width: 168px;
+            height: 172px;
+            background: #fff;
+            .img{
+                margin-top: 24px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .num{
+                height: 32px;
+                @include flex();
+                @include justify-content(center);
+                @include align-items(center);
+                .jian{
+                    width: 20px;
+                    height: 32px;
+                    line-height: 32px;
+                    color: #1872d0;
+                    font-size: 30px;
+                    margin-right: 12px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+                input{
+                    width: 80px;
+                    height: 32px;
+                    background: #f0f2f5;
+                    border: none;
+                    text-align: center;
+                    color: #000;
+                }
+                .jia{
+                    width: 20px;
+                    height: 32px;
+                    line-height: 32px;
+                    color: #1872d0;
+                    font-size: 30px;
+                    margin-left: 12px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+            p{
+                margin-top: 12px;
+                margin-bottom: 0;
+                font-size: 12px;
+                color: #666;
+                text-align: center;
+            }
+        }
     }
     .box-text {
         width: 520px;
@@ -715,7 +769,7 @@ body {
         -moz-flex: 1;
         -ms-flex: 1;
         -o-flex: 1;
-        @include flex();
+        // @include flex();
         .itemlistText {
             @include flex();
             padding-bottom: 8px;
@@ -734,7 +788,55 @@ body {
                 -ms-flex: 1;
                 -o-flex: 1;
                 font-size: 14px;
-                color: #000;
+                color: #181818;
+            }
+        }
+    }
+}
+
+.pzfy{
+    background: #fff;
+    .container{
+        height: 180px;
+        @include flex();
+        @include align-items(center);        
+        .leftname {
+            float: left;
+            width: 150px;
+            line-height: 31px;
+            color: #1872d0;
+            font-size: 16px;
+            text-align: right;
+            padding-right: 48px;
+        }
+        .price{
+            padding-left: 470px;
+            margin-right: 102px;
+            font-size: 20px;
+            color: #000;
+            @include flex();
+            @include justify-content(flex-start);
+            @include align-items(center);  
+            span.num{
+                padding-right: 26px;
+            }   
+            span.rmb{
+                width: 17px;
+                height: 24px;
+                background: transparent url('../images/rmb.png') center no-repeat;
+            }
+        }
+        .priceMore{
+            width: 200px;
+            height: 48px;
+            line-height: 44px;
+            border: 2px solid #1872d0;
+            text-align: center;
+            font-size: 16px;
+            color: #000;
+            cursor: pointer;
+            span{
+                color: #1872d0;
             }
         }
     }

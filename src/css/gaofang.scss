@@ -41,6 +41,9 @@ nav{
 			cursor: pointer;
 			position: relative;
 		}
+		a:hover {
+		    color: #1872d0;
+		}
 		a.active{
 			color: #1872d0;
 		}
@@ -89,7 +92,117 @@ section{
 	}
 	.cpys{
 		height: 550px;
-		background: #f8f8f8 url('../images/gaofang/cpysbgywz.png') center no-repeat;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		background-color: #f8f8f8;
+		.container{
+			@include flex();
+			@include justify-content(center);
+			@include align-items(center);
+			.left{
+				height: 510px;
+				float: left;
+				text-align: right;
+				padding-right: 32px;
+				.left_top{
+					height: 265px;
+					padding-top: 62px;
+				}
+				.left_bottom{
+					padding-top: 56px;
+				}
+				h4{
+					font-size: 18px;
+					color: #181818;
+					font-weight: 600;
+					margin-top: 0;
+					margin-bottom: 12px;
+				}
+				p{
+					color: #999;
+					font-size: 14px;
+					line-height: 28px;
+					margin-bottom: 0;
+				}
+				p.last{
+					margin-top: 20px;
+				}
+			}
+			.center{
+				width: 510px;
+				height: 510px;
+				float: left;
+				text-align: center;
+				line-height: 510px;
+				position: relative;
+				background: transparent url('../images/gaofang/cpyszhongbg.png') center no-repeat;
+				background-size: 100% 100%;
+				span{
+					font-size: 24px;
+					color: #000;
+					font-weight: 600;
+				}
+				>div{
+					position: absolute;
+					width: 92px;
+					height: 92px;
+					border: 1px solid #1872d0;
+					border-radius: 100%;
+				}
+				>div.active{
+					background-color: #1872d0;
+				}
+				.top_left{
+					top: 80px;
+					left: 0;
+					background: #fff url('../images/gaofang/miaofengbai.png') center no-repeat;
+				}
+				.top_right{
+					top: 80px;
+					right: 0;
+					background: #fff url('../images/gaofang/aqfhlv.png') center no-repeat;
+				}
+				.bottom_left{
+					top: 340px;
+					left: 0;
+					background: #fff url('../images/gaofang/cldzlv.png') center no-repeat;
+				}
+				.bottom_right{
+					top: 340px;
+					right: 0;
+					background: #fff url('../images/gaofang/zyfwlv.png') center no-repeat;
+				}
+			}
+			.right{
+				height: 510px;
+				float: left;
+				text-align: left;
+				padding-left: 32px;
+				.right_top{
+					height: 265px;
+					padding-top: 62px;
+				}
+				.right_bottom{
+					padding-top: 60px;
+				}
+				h4{
+					font-size: 18px;
+					color: #181818;
+					font-weight: 600;
+					margin-top: 0;
+					margin-bottom: 12px;
+				}
+				p{
+					color: #999;
+					font-size: 14px;
+					line-height: 28px;
+					margin-bottom: 0;
+				}
+				p.last{
+					margin-top: 20px;
+				}
+			}
+		}
 	}
 	.cptd_title,.gfcpjs_title{
 		h3{
