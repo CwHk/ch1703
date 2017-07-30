@@ -30,7 +30,7 @@
     -webkit-box-align: $align-items;
 }
 
-@mixin flex-wrap ($wrap)  {      
+@mixin flex-wrap ($wrap) {
     -webkit-flex-wrap: $wrap;
     -moz-flex-wrap: $wrap;
     -ms-flex-wrap: $wrap;
@@ -47,56 +47,65 @@
 }
 
 @mixin order ($order) {
-    -webkit-box-ordinal-group: $order;    
-    -moz-box-ordinal-group: $order;       
-    -ms-flex-order: $order;               
-    -webkit-order: $order;                
-    order: $order;   
+    -webkit-box-ordinal-group: $order;
+    -moz-box-ordinal-group: $order;
+    -ms-flex-order: $order;
+    -webkit-order: $order;
+    order: $order;
 }
 
 @mixin align-self ($align-self) {
     -webkit-align-self: $align-self;
-    align-self: $align-self;   
+    align-self: $align-self;
 }
 
 @mixin flex3 ($num) {
-    -webkit-box-flex: $num;      /* OLD - ios 6-, Safari 3.1-6 */
-    -webkit-flex: $num;          /* Chrome */
-    -moz-box-flex: $num;         /* Firefox 19- */
-    -ms-flex: $num;              /* IE 10 */
+    -webkit-box-flex: $num;
+    /* OLD - ios 6-, Safari 3.1-6 */
+    -webkit-flex: $num;
+    /* Chrome */
+    -moz-box-flex: $num;
+    /* Firefox 19- */
+    -ms-flex: $num;
+    /* IE 10 */
     flex: $num;
 }
 
-
-
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .cpys_flexBox {
         width: 750px;
     }
 }
-@media (min-width: 992px){
+
+@media (min-width: 992px) {
     .cpys_flexBox {
         width: 970px;
     }
 }
-@media (min-width: 1200px){
+
+@media (min-width: 1200px) {
     .cpys_flexBox {
-        width: 1170px;    
-    }   
+        width: 1170px;
+    }
 }
+
 .cpys_flexBox {
     margin-right: auto;
     margin-left: auto;
 }
 
 // 轮播图分页小圆点样式
-.banner-box .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+.banner-box .swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
     bottom: 122px;
     z-index: 666;
 }
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 22px;
 }
+
 .banner-box .swiper-pagination-bullet {
     width: 16px;
     height: 16px;
@@ -104,6 +113,7 @@
     background: transparent;
     opacity: 1;
 }
+
 .swiper-container .swiper-pagination-bullet-active {
     background: #fff;
 }
