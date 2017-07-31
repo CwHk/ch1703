@@ -16,5 +16,9 @@ $(function() {
     });
     $('.gwjd').mouseover(function() {
         $('.jfdt').css("background-image", "url(images/guowaijf.png)");
+    });
+    $('.tab-hot').on('click','.tab-item',function(){
+        $(this).addClass('active').siblings().removeClass('active');
     })
+
 })

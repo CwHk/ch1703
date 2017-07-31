@@ -359,7 +359,7 @@ h3,
 
 .hot-detail-item {
     padding-bottom: 2px;
-    text-align: center;
+    // text-align: center;
 }
 
 .text-choose-d {
@@ -369,6 +369,7 @@ h3,
 }
 
 .hot-detail-item span {
+    padding-left: 40px;
     padding-right: 20px;
 }
 
