@@ -11,7 +11,7 @@ nav {
         line-height: 73px;
         text-align: center;
         @include flex();
-        a{
+        a {
             height: 62px;
             flex: 1;
             font-size: 16px;
@@ -611,13 +611,9 @@ body {
             .select-box {
                 margin-left: 150px;
                 max-width: 680px;
-                .active {
-                    border: 1px solid #267ad3;
-                    background: #f2f6f9;
-                    border-radius: 20px;
-                }
                 .item {
                     width: 108px;
+                    vertical-align: middle;
                     margin-bottom: 8px;
                     display: inline-block;
                     height: 31px;
@@ -639,6 +635,12 @@ body {
                         top: -6px;
                         position: absolute;
                     }
+                }
+                .active {
+                    border: 1px solid #267ad3;
+                    background: #f2f6f9;
+                    border-radius: 20px;
+                    line-height: 29px;
                 }
             }
         }
@@ -710,21 +712,21 @@ body {
         margin-left: 150px;
         max-width: 890px;
         @include flex();
-        .rightBox{
+        .rightBox {
             width: 168px;
             height: 172px;
             background: #fff;
-            .img{
+            .img {
                 margin-top: 24px;
                 text-align: center;
                 margin-bottom: 20px;
             }
-            .num{
+            .num {
                 height: 32px;
                 @include flex();
                 @include justify-content(center);
                 @include align-items(center);
-                .jian{
+                .jian {
                     width: 20px;
                     height: 32px;
                     line-height: 32px;
@@ -734,7 +736,7 @@ body {
                     text-align: center;
                     cursor: pointer;
                 }
-                input{
+                input {
                     width: 80px;
                     height: 32px;
                     background: #f0f2f5;
@@ -742,7 +744,7 @@ body {
                     text-align: center;
                     color: #000;
                 }
-                .jia{
+                .jia {
                     width: 20px;
                     height: 32px;
                     line-height: 32px;
@@ -753,7 +755,7 @@ body {
                     cursor: pointer;
                 }
             }
-            p{
+            p {
                 margin-top: 12px;
                 margin-bottom: 0;
                 font-size: 12px;
@@ -794,12 +796,12 @@ body {
     }
 }
 
-.pzfy{
+.pzfy {
     background: #fff;
-    .container{
+    .container {
         height: 180px;
         @include flex();
-        @include align-items(center);        
+        @include align-items(center);
         .leftname {
             float: left;
             width: 150px;
@@ -809,24 +811,24 @@ body {
             text-align: right;
             padding-right: 48px;
         }
-        .price{
+        .price {
             padding-left: 470px;
             margin-right: 102px;
             font-size: 20px;
             color: #000;
             @include flex();
             @include justify-content(flex-start);
-            @include align-items(center);  
-            span.num{
+            @include align-items(center);
+            span.num {
                 padding-right: 26px;
-            }   
-            span.rmb{
+            }
+            span.rmb {
                 width: 17px;
                 height: 24px;
                 background: transparent url('../images/rmb.png') center no-repeat;
             }
         }
-        .priceMore{
+        .priceMore {
             width: 200px;
             height: 48px;
             line-height: 44px;
@@ -835,7 +837,7 @@ body {
             font-size: 16px;
             color: #000;
             cursor: pointer;
-            span{
+            span {
                 color: #1872d0;
             }
         }
