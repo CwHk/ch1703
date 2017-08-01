@@ -43,8 +43,8 @@
                 cursor: pointer;
                 width: 200px;
                 height: 40px;
-                border: 2px solid #2f80d5;
-                color: #000;
+                border: 2px solid #f3f3f3;
+                color: #d5d5d5;
                 font-size: 16px;
                 line-height: 36px;
                 text-align: center;
@@ -56,14 +56,16 @@
                 @include flex();
                 @include align-items(center);
                 @include justify-content(center);
-                .check-box {
-                    background: url(../images/check-box-icon.png) no-repeat center center;
-                    background-size: 16px 16px;
-                    height: 16px;
+                input{
+                    margin: 0;
+                    display: block;
                     width: 16px;
-                    margin-right: 18px;
+                    height: 16px;
+                    margin-right: 14px;
                 }
                 .gz-text {
+                    height: 20px;
+                    line-height: 20px;
                     color: #2f80d5;
                     margin: 0;
                 }

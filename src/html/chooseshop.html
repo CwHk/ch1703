@@ -27,8 +27,8 @@
                 </div>
                 <div class="col-sm-6 col-xs-6 phonebox">
                     <div class="row">
-                        <div class="regiser"><a href="./html/register.html">注册</a></div>
-                        <div class="login"><a href="./html/login.html">登录</a></div>
+                        <div class="regiser"><a href="./register.html">注册</a></div>
+                        <div class="login"><a href="./login.html">登录</a></div>
                     </div>
                 </div>
             </div>
@@ -227,24 +227,27 @@
                             <div class="choose-item">
                                 <div class="list-select-name">数据盘：</div>
                                 <div class="select-box clearfix">
-                                    <div class="item-box">
-                                        <div class="item">
-                                            <div class="close"></div>
-                                            <div class="icobxox"><img src="../images/ssd01.png" alt=""></div>
-                                            <div class="inputbox">
-                                                <input type="text" placeholder="500  Gb">
+                                    <div class="rightTopBox clearfix">
+                                        <div class="item-box">
+                                            <div class="item">
+                                                <div class="close"></div>
+                                                <div class="icobxox"><img src="../images/ssd01.png" alt=""></div>
+                                                <div class="inputbox">
+                                                    <input type="text" placeholder="500">
+                                                    <span>Gb</span>
+                                                </div>
+                                                <div class="box-text-detail-bottom">5 ～ 2000Gb 分配挂载点</div>
                                             </div>
-                                            <div class="box-text-detail-bottom">5 ～ 2000Gb 分配挂载点</div>
                                         </div>
-                                        <div class="text-zd">最多配置<span>4</span>块数据盘</div>
-                                    </div>
-                                    <div class="item-box jiaParentBox">
-                                        <div class="item">
-                                            <!-- <div class="close"></div> -->
-                                            <div class="icobxox"><img src="../images/huissd.png" alt=""></div>
-                                            <div class="jiabck"></div>
+                                        <div class="item-box jiaParentBox">
+                                            <div class="item">
+                                                <!-- <div class="close"></div> -->
+                                                <div class="icobxox"><img src="../images/huissd.png" alt=""></div>
+                                                <div class="jiabck"></div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="text-zd">最多配置<span>4</span>块数据盘</div>
                                 </div>
                             </div>
                         </div>
@@ -394,7 +397,7 @@
                         </div>
                         <div class="choose-let">
                             <div class="itemsbtn active">设置密码</div>
-                            <div class="itemsbtn">自动生成密码</div>
+                            <div class="itemsbtn second">自动生成密码</div>
                             <div class="ptop-text-detail">请记住您所设置的密码。如果遗忘，可登录云服务器控制平台进行密码重制</div>
                         </div>
                     </div>
@@ -630,7 +633,7 @@
         }
     });
     $('.jiabck').click(function(){
-        var _html = '<div class="item-box"><div class="item"><div class="close"></div><div class="icobxox"><img src="../images/ssd01.png" alt=""></div><div class="inputbox"><input type="text" placeholder="500  Gb"></div><div class="box-text-detail-bottom">5 ～ 2000Gb 分配挂载点</div></div><div class="text-zd">最多配置<span>4</span>块数据盘</div></div>'
+        var _html = '<div class="item-box"><div class="item"><div class="close"></div><div class="icobxox"><img src="../images/ssd01.png" alt=""></div><div class="inputbox"><input type="text" placeholder="500"><span>Gb</span></div><div class="box-text-detail-bottom">5 ～ 2000Gb 分配挂载点</div></div></div>'
         var _index = $('.jiaParentBox').index();
         if(_index<4){
             $('.jiaParentBox').before(_html);

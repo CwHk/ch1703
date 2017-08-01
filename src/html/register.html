@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-sm-6 col-xs-6 phonebox">
                     <div class="row">
-                        <div class="regiser"><a href="javascript:void(0)">首页</a></div>
+                        <div class="regiser"><a href="../index.html">首页</a></div>
                     </div>
                 </div>
             </div>
@@ -67,11 +67,11 @@
                     </div>
                     <div class="form-box clearfix">
                         <input type="text" class="text-code" placeholder="设置用户名">
-                        <div class="code-btn">59s 重新发送</div>
+                        <div class="code-btn"><span class="secondsTime"></span> <span class="text">点击发送</span></div>
                         <div class="formva-y"></div>
                     </div>
                     <div class="choose-sm">
-                        <div class="check-box"></div>
+                        <input type="checkbox" name="条款">
                         <p class="gz-text">《云奥云服务条款》《法律声明和隐私权政策》</p>
                     </div>
                     <div class="submit-btn">
@@ -161,17 +161,49 @@
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
 <script type="text/javascript">
-    function selectGuonei(obj) {
-        console.log(obj.selectedIndex);
-        console.log(obj.value);
-        $('.city').html(obj.value);
-    }
+    $('.choose-sm input').click(function(){
+        if($(this).is(':checked')){
+            $('.submit-btn').css({'border':'2px solid #2f80d5','color':'#000'})
+        }else{
+            $('.submit-btn').css({'border':'2px solid #f3f3f3','color':'#d5d5d5'})
+        }
+    })
+    $('.submit-btn').click(function(){
+        if($('.choose-sm input').is(':checked')){
 
-    function selectGuowai(obj) {
-        console.log(obj.selectedIndex);
-        console.log(obj.value);
-        $('.city').html(obj.value);
-    }
+        }else{
+            return false;
+        }
+    });
+    $('.code-btn').click(function(){
+        $(this).children('.text').html("重新发送"); 
+        if($(this).hasClass('disabled')){
+            return false;
+        }else{
+            settime(this);
+        }
+    })
+
+    var countdown = 60; 
+    function settime(val) { 
+        if (countdown == 0) { 
+            $(val).removeClass("disabled");    
+            $(val).find('.secondsTime').html('');
+            countdown = 60; 
+            $(val).css({'border':'1px solid #81b2e5','color':'#81b2e5'});
+            clearTimeout(timer1);
+        } else { 
+            $(val).addClass("disabled"); 
+            $(val).find('.secondsTime').html(countdown+'s'); 
+            $(val).css({'border':'1px solid #f3f3f3','color':'#d5d5d5'});
+            countdown--; 
+            var timer1 = setTimeout(function() { 
+                settime(val) 
+            },1000) 
+        }
+    } 
+
+
 </script>
 
 </html>
