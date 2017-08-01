@@ -40,7 +40,7 @@
             <a href="chooseshop.html"  class="active">云服务器</a>
             <a href="zhiboSpeedUp.html">CDN</a>
             <a href="houtaiguanli.html">服务器租用与托管</a>
-            <a href="javascript:;">高防</a>
+            <a href="gaofang.html">高防</a>
         </div>
     </nav>
     <div class="section">
@@ -68,7 +68,7 @@
                 <div class="container">
                     <div class="configbox">
                         <div class="list-item">
-                            <div class="list-select-name">城市</div>
+                            <div class="list-select-name">地区：</div>
                             <div class="select-box">
                                 <div class="item active">广东</div>
                                 <div class="item"><span class="text-c">东北</span></div>
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                         <div class="list-item">
-                            <div class="list-select-name">线路</div>
+                            <div class="list-select-name">线路：</div>
                             <div class="select-box">
                                 <div class="item"><span class="text-c">佛山高防双线</span></div>
                                 <div class="item"><span class="text-c">佛山高防双线</span></div>
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                         <div class="list-item">
-                            <div class="list-select-name">CPU</div>
+                            <div class="list-select-name">CPU：</div>
                             <div class="select-box">
                                 <div class="item"><span class="text-c">1核</span></div>
                                 <div class="item"><span class="text-c">1核</span></div>
@@ -113,7 +113,7 @@
                             </div>
                         </div>
                         <div class="list-item">
-                            <div class="list-select-name">内存</div>
+                            <div class="list-select-name">内存：</div>
                             <div class="select-box">
                                 <div class="item"><span class="text-c">1Gb</span></div>
                                 <div class="item"><span class="text-c">1Gb</span></div>
@@ -125,7 +125,7 @@
                             </div>
                         </div>
                         <div class="list-item">
-                            <div class="list-select-name">系统盘</div>
+                            <div class="list-select-name">系统盘：</div>
                             <div class="select-box">
                                 <div class="item active">32Gb</div>
                                 <div class="item"><span class="text-c">32Gb</span></div>
@@ -190,7 +190,7 @@
                     <div class="container ">
                         <div class="configbox">
                             <div class="choose-item">
-                                <div class="list-select-name">城市</div>
+                                <div class="list-select-name">操作系统：</div>
                                 <div class="select-box clearfix">
                                     <div class="choosebox chooseboxs">
                                         <select class="choosext">
@@ -225,7 +225,7 @@
                                 </div>
                             </div>
                             <div class="choose-item">
-                                <div class="list-select-name">城市</div>
+                                <div class="list-select-name">数据盘：</div>
                                 <div class="select-box clearfix">
                                     <div class="item-box">
                                         <div class="item">
@@ -236,11 +236,11 @@
                                             </div>
                                             <div class="box-text-detail-bottom">5 ～ 2000Gb 分配挂载点</div>
                                         </div>
-                                        <div class="text-zd">最多配置四块数据盘</div>
+                                        <div class="text-zd">最多配置<span>4</span>块数据盘</div>
                                     </div>
-                                    <div class="item-box">
+                                    <div class="item-box jiaParentBox">
                                         <div class="item">
-                                            <div class="close"></div>
+                                            <!-- <div class="close"></div> -->
                                             <div class="icobxox"><img src="../images/huissd.png" alt=""></div>
                                             <div class="jiabck"></div>
                                         </div>
@@ -257,7 +257,7 @@
                 <div class="configtext">带宽&防御值&时间</div>
                 <div class="container">
                     <div class="schedule">
-                        <div class="schedule-name">带宽</div>
+                        <div class="schedule-name">带宽：</div>
                         <div class="schedule-item clearfix">
                             <div class="schedule-config">
                                 <div class="schedule-config-l"></div>
@@ -290,7 +290,7 @@
                         </div>
                     </div>
                     <div class="schedule schde-f">
-                        <div class="schedule-name">防御值</div>
+                        <div class="schedule-name">防御值：</div>
                         <div class="schedule-item clearfix">
                             <div class="schedule-config">
                                 <div class="schedule-config-l1"></div>
@@ -335,7 +335,7 @@
                         </div>
                     </div>
                     <div class="schedule">
-                        <div class="schedule-name">时常</div>
+                        <div class="schedule-name">时常：</div>
                         <div class="schedule-item clearfix">
                             <div class="schedule-config">
                                 <div class="schedule-config-l1"></div>
@@ -617,6 +617,32 @@
     $('.choose-let .itemsbtn').click(function() {
         $(this).addClass("active");
         $(this).siblings().removeClass('active')
+    });
+    $(window).scroll(function(){
+        var $top = $(this).scrollTop();
+        var windowWidth = $(window).width();
+        var boxWidth = $('.configbox').width();
+        var rightNum = windowWidth/2 - boxWidth/2;
+        if($top>985){
+            $(".show-detail").css({'position':'fixed','top':'72px','right':rightNum+'px'})
+        }else{
+            $(".show-detail").css({'position':'absolute','top':'160px','right':'0px'})
+        }
+    });
+    $('.jiabck').click(function(){
+        var _html = '<div class="item-box"><div class="item"><div class="close"></div><div class="icobxox"><img src="../images/ssd01.png" alt=""></div><div class="inputbox"><input type="text" placeholder="500  Gb"></div><div class="box-text-detail-bottom">5 ～ 2000Gb 分配挂载点</div></div><div class="text-zd">最多配置<span>4</span>块数据盘</div></div>'
+        var _index = $('.jiaParentBox').index();
+        if(_index<4){
+            $('.jiaParentBox').before(_html);
+            // $('.text-zd span').html(3-_index);
+        }else{
+            return false;
+        }
+    });
+    $('.select-box').on('click','.close',function(){
+        $(this).parents('.item-box').remove();
+        var _index = $('.jiaParentBox').index();
+        // $('.text-zd span').html(4-_index);
     })
 </script>
 

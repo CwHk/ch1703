@@ -555,6 +555,9 @@ h3,
         margin: 0;
         width: 100%;
     }
+    .tab-hot >.tab-item{
+        cursor: pointer;
+    }
     .tab-item {
         padding: 10px 0;
         width: 50%;
