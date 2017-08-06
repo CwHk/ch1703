@@ -1,0 +1,31 @@
+[
+
+    { "name": "windows", "he":[
+
+        {"name":"32核", "version":["win2003 SP2 企业版 32位","win2003 R2 SP2 企业版 32位","win2003 SP2 企业版 32位 集成iis mssql"]},
+
+        {"name":"64核", "version":["win2003 SP2 企业版 64位","win2003 R2 SP2 企业版 64位","win2008 R2 SP1 企业版 64位","win2008 R2 SP1 数据中心 64位","win2012 R2 标准版 64位","win2012 R2 数据中心版 64位","win2008 R2 SP1 标准版 64位 集成iis mssql05","win2008 R2 SP1 标准版 64位 集成apache"]}
+    ]},
+
+    { "name": "centos", "he":[
+
+        {"name":"32核", "version":["CentOS 6.8 32位","CentOS 6.5 32位","CentOS 6.5 32位 集成apache mysql php"]},
+
+        {"name":"64核", "version":["CentOS 6.8 64位","CentOS 6.5 64位","CentOS 7.0 64位","CentOS 7.2 64位","CentOS 7.2 64位 集成nginx mysql php","CentOS 7.2 64位 集成apache mysql php","CentOS 6.5 64位 集成apache mysql php"]}
+    ]},
+
+    { "name": "ubuntu", "he":[
+
+        {"name":"32核", "version":["Ubuntu Server 14.04 LTS 32位","Ubuntu Server 16.04 LTS 32位"]},
+
+        {"name":"64核", "version":["Ubuntu Server 16.04 LTS 64位","Ubuntu Server 14.04 LTS 64位"]}
+    ]},
+
+    { "name": "dedian", "he":[
+
+        {"name":"32核", "version":["Debian 8.6 32位","Debian 8.2 32位","Debian 7.8 32位"]},
+
+        {"name":"64核", "version":["Debian 8.6 64位","Debian 8.2 64位","Debian 7.8 64位"]}
+    ]}
+
+]

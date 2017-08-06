@@ -196,31 +196,19 @@
                             <div class="choose-item">
                                 <div class="list-select-name">操作系统：</div>
                                 <div class="select-box clearfix">
-                                    <div class="choosebox chooseboxs">
+                                    <div class="choosebox system">
                                         <select class="choosext">
-                                            <option value="">WIndows</option>
-                                            <option value="">WIndows</option>
-                                            <option value="">WIndows</option>
-                                            <option value="">WIndows</option>
-                                            <option value="">WIndows</option>
+                                            <option>请选择系统</option>
                                         </select>
                                     </div>
-                                    <div class="choosebox chooseboxs">
-                                        <select class="choosext ">
-                                            <option value="">64核</option>
-                                            <option value="">WIndows</option>
-                                            <option value="">WIndows</option>
-                                            <option value="">WIndows</option>
-                                            <option value="">WIndows</option>
+                                    <div class="choosebox he">
+                                        <select class="choosenh">
+                                            <option>请选择内核</option>
                                         </select>
                                     </div>
-                                    <div class="choosebox chooseboxbig">
-                                        <select class="choosextdetai">
-                                            <option value="">64核</option>
-                                            <option value="">WIndows</option>
-                                            <option value="">WIndows</option>
-                                            <option value="">WIndows</option>
-                                            <option value="">WIndows</option>
+                                    <div class="choosebox version chooseboxbig">
+                                        <select class="choosebb">
+                                            <option>请选择版本</option>
                                         </select>
                                     </div>
                                     <div class="text-choose">
@@ -411,7 +399,7 @@
                         </div>
                         <div class="choose-let">
                             <div class="inp-text">
-                                <input type="text" placeholder="8～30个字符，包含大小写和字母，不支持特殊符号">
+                                <input type="password" placeholder="8～30个字符，包含大小写和字母，不支持特殊符号">
                                 <div class="yes-icon"></div>
                             </div>
 
@@ -426,14 +414,14 @@
                         </div>
                         <div class="choose-let">
                             <div class="inp-text">
-                                <input type="text" placeholder="请再次输入密码">
+                                <input type="password" placeholder="请再次输入密码">
                                 <div class="yes-icon"></div>
                             </div>
                             <div class="inp-texts"></div>
                             <div class="ptop-text-detail"></div>
                         </div>
                     </div>
-                    <div class="itemboxs clearfix">
+                    <div class="itemboxs ffqName clearfix">
                         <div class="l-name">
                             服务器名称：
                         </div>
@@ -624,6 +612,38 @@
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
 <script type="text/javascript">
+    var versionData;
+    $.ajax({  
+        type:"GET",  
+        url:"../data/json1.json",  
+        dataType:"json",  
+        success:function(res){  
+            versionData = res;
+            console.log(res);
+            console.log(typeof(res));
+            for(var i=0;i<res.length;i++){
+                $('.choosext').append("<option value='"+i+"'>"+res[i].name+"</option>");
+            }
+        } 
+    });  
+    $('.jqbox').on('change','.choosext',function(){
+        $('.choosenh').html('<option>请选择内核</option>');
+        $('.choosebb').html('<option>请选择版本</option>');
+        var m = $('.choosext').val();
+        var heData = versionData[m].he;
+        for (var i=0;i<heData.length;i++) {
+            $('.choosenh').append("<option value='"+i+"'>"+heData[i].name+"</option>");
+        }
+    });
+    $('.jqbox').on('change','.choosenh',function(){
+        $('.choosebb').html('<option>请选择版本</option>');
+        var x = $('.choosext').val();
+        var y = $('.choosenh').val();
+        var bbData = versionData[x].he[y].version;
+        for (var i=0;i<bbData.length;i++) {
+            $('.choosebb').append("<option value='"+i+"'>"+bbData[i]+"</option>");
+        }
+    });
     $(".navcantainer a").mouseover(function() {
         $(this).find('.toggle_box').show();
         $(this).addClass("active")
@@ -633,19 +653,8 @@
         $(this).addClass("active")
         $(this).siblings('.item').removeClass('active');
     })
-<<<<<<< HEAD
-    // $('.choose-let .itemsbtn').click(function() {
-    //     $(this).addClass("active");
-    //     $(this).siblings().removeClass('active')
-    // });
-    $(window).scroll(function(){
-=======
-    $('.choose-let .itemsbtn').click(function() {
-        $(this).addClass("active");
-        $(this).siblings().removeClass('active')
-    });
+
     $(window).scroll(function() {
->>>>>>> cc20db47e693756354be28e4af493e004a68309b
         var $top = $(this).scrollTop();
         var windowWidth = $(window).width();
         var boxWidth = $('.configbox').width();
@@ -691,7 +700,46 @@
         $(this).siblings().removeClass('active');
         $('.tipone').html('注： 密码将通过短信发送到您的手机').css('color','red');
         $('.loginPsd,.confirmPsd').hide();
-    })
+    });
+    $('.loginPsd').on('blur','input',function(){
+        var r=/^(?=.*[0-9].*)(?=.*[A-Z].*)(?=.*[a-z].*)[0-9A-Za-z]{8,30}$/;
+        // var r=/^(?![0-9A-Z]+$)(?![0-9a-z]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$/;
+        var _loginPsd = $(this).val()
+        var flag = r.test(_loginPsd);
+        if(!flag){
+            if(_loginPsd.length<8||_loginPsd.length>30){
+                $('.loginPsd .ptop-text-detail').html('密码长度为8~30').css('color','red');
+            }else{
+                $('.loginPsd .ptop-text-detail').html('对不起，您输入的登录密码格式不正确！').css('color','red');
+            }
+        }else{
+            $('.loginPsd .ptop-text-detail').html("");
+        }
+    });
+    $('.confirmPsd').on('blur','input',function(){
+        var _loginPsd = $('.loginPsd input').val();
+        var _confirmPsd = $(this).val();
+        var flag = _confirmPsd==_loginPsd;
+        if(!flag){
+            $('.confirmPsd .ptop-text-detail').html('对不起，您两次密码输入的不一样！').css('color','red');
+        }else{
+            $('.confirmPsd .ptop-text-detail').html("");
+        }
+    });
+    $('.ffqName').on('blur','input',function(){
+        var _ffqName = $(this).val();
+        var r=/^[a-zA-Z\u4e00-\u9fa5].{1,128}$/;
+        var flag = r.test(_ffqName);
+        if(!flag){
+            if(_ffqName.length==0){
+                $('.ffqName .ptop-text-detail').html("如果不填写，系统将会随机生成名称").css('color','#898989');
+            }else{
+                $('.ffqName .ptop-text-detail').html("对不起，您输入的服务器名称格式不正确！").css('color','red');
+            }
+        }else{
+            $('.ffqName .ptop-text-detail').html("").css('color','#898989');
+        }
+    });
 </script>
 
 </html>

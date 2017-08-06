@@ -260,6 +260,10 @@ h3,
     color: #1872d0;
 }
 
+.tab-hot>.tab-item {
+    cursor: pointer;
+}
+
 .tab-hot .active:after {
     content: '';
     position: absolute;
@@ -282,6 +286,7 @@ h3,
     border: 1px solid #1872d0;
     color: #1872d0;
     margin: 40px auto 28px auto;
+    cursor: pointer;
 }
 
 .more {
@@ -562,9 +567,6 @@ h3,
     .tab-hot {
         margin: 0;
         width: 100%;
-    }
-    .tab-hot>.tab-item {
-        cursor: pointer;
     }
     .tab-item {
         padding: 10px 0;

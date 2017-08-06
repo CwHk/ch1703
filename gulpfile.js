@@ -34,11 +34,11 @@ gulp.task('fonts', function() {
         .pipe(connect.reload()); //热加载
 });
 
-// gulp.task('data',function(){   
-//     return gulp.src(['src/xml/*.xml','src/json/*.json','!src/json/test-*.json'])   //复制多个文件，前面加！号就是不包含
-//            .pipe(gulp.dest('dist/data'))
-//            .pipe(connect.reload());            //热加载;
-// });
+gulp.task('data',function(){   
+    return gulp.src(['src/data/*.xml','src/data/*.json','!src/data/test-*.json'])   //复制多个文件，前面加！号就是不包含
+           .pipe(gulp.dest('dist/data'))
+           .pipe(connect.reload());            //热加载;
+});
 
 // gulp.task('copy-css', function() {
 //     return gulp.src('src/css/**/*.css')
@@ -68,19 +68,15 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist/js')) //合并文件并给合并后的文件取名
 });
 
-// gulp.task('clean', function(callback) {
-//     del('dist');
-//     return cache.clearAll(callback);
-// });
 gulp.task('clean', function(cb) {
     return del(['dist/**/*'], cb);
 });
 
-// gulp.task('build',['clean','copy-index','copy-html','images','fonts','sass','copy-css','copy-js','scripts'],function(){     //build任务依赖其他几个任务，同时执行他依赖的几个任务，等几个都完成后再执行自己的回调函数（输出编译成功）
+// gulp.task('build',['clean','copy-index','copy-html','images','fonts','data','sass','copy-css','copy-js','scripts'],function(){     //build任务依赖其他几个任务，同时执行他依赖的几个任务，等几个都完成后再执行自己的回调函数（输出编译成功）
 //     console.log('编译成功！');
 // });
 gulp.task('build', function(callback) {
-    runSequence('clean', ['copy-index', 'copy-html', 'images', 'fonts', 'sass', 'copy-js', 'scripts'], function() {
+    runSequence('clean', ['copy-index', 'copy-html', 'images', 'fonts', 'data', 'sass', 'copy-js', 'scripts'], function() {
         console.log('编译成功！');
     })
 });
@@ -97,7 +93,7 @@ gulp.task('watch', function() { //监视任务
     gulp.watch('./*.html', ['copy-index']); //当index.html变化时执行copy-index任务
     gulp.watch('src/html/**/*.html', ['copy-html']);
     gulp.watch('src/images/**/*', ['images']);
-    // gulp.watch(['src/xml/*.xml','src/json/*.json','!src/json/test-*.json'],['data']);
+    gulp.watch(['src/data/*.xml','src/data/*.json','!src/data/test-*.json'],['data']);
     gulp.watch('src/css/**/*', ['sass']);
     // gulp.watch('src/css/**/*.css', ['copy-css']);
     gulp.watch(['src/js/*.js', '!src/js/jquery-1.11.3.js', '!src/js/swiper-3.3.1.min.js'], ['copy-js']);

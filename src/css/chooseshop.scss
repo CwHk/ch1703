@@ -235,10 +235,11 @@ body {
                     float: left;
                     margin-right: 18px;
                 }
-                .chooseboxs {
+                .choosebox {
                     width: 130px;
                     height: 32px;
                     background: #fff;
+                    z-index: 999;
                 }
                 .chooseboxbig {
                     width: 396px;
@@ -247,7 +248,7 @@ body {
                     position: relative;
                     background: #fff;
                 }
-                .choosextdetai {
+                .choosebb {
                     width: 396px;
                     height: 32px;
                     padding: 0 13px;
@@ -260,7 +261,7 @@ body {
                     -moz-appearance: none;
                     -webkit-appearance: none;
                 }
-                .choosext {
+                .choosext,.choosenh {
                     width: 130px;
                     height: 32px;
                     padding: 0 13px;
@@ -702,8 +703,9 @@ body {
         width: 100%;
         font-size: 12px;
         height: 57px;
+        padding: 21px 0;
         color: #898989;
-        line-height: 57px;
+        line-height: 15px;
     }
 }
 
