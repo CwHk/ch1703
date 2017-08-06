@@ -32,7 +32,7 @@ header .container {
     margin-right: 30px
 }
 
-.header-box a{
+.header-box a {
     text-decoration: none;
     color: #313132;
 }
@@ -100,9 +100,44 @@ header .container {
     height: 50px;
     margin-bottom: 12px;
     cursor: pointer;
+    position: relative;
 }
 
-.fix_right .ybl_qq {
+.fix_right>div:hover .lChi {
+    display: block;
+}
+
+.lChi {
+    display: none;
+    height: 50px;
+    position: absolute;
+    right: 49px;
+    top: 0;
+    padding: 0 20px 0 0;
+    overflow: hidden;
+    transition: all linear .2s;
+}
+
+.lChi .ar {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.txt {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 20px;
+    white-space: nowrap;
+    border-radius: 4px;
+    background: url(http://cache.qy.com.cn/new_version/images/optBg.png) repeat;
+}
+
+.fix_right .qq {
     animation: tiaodong 0.5s linear 0s infinite alternate;
     -webkit-animation: tiaodong 0.5s linear 0s infinite alternate;
 }
@@ -141,5 +176,8 @@ header .container {
     .logo img {
         width: 90%;
         height: auto;
+    }
+    .phone {
+        display: block;
     }
 }
