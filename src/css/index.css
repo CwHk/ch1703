@@ -325,7 +325,7 @@ h3,
 }
 
 .money {
-    padding-bottom: 38px;
+    padding-bottom: 20px;
     color: #1872d0;
     font-size: 16px;
     text-align: center;
@@ -504,6 +504,14 @@ h3,
     justify-content: center;
 }
 
+.text-for {
+    padding-bottom: 20px;
+    color: #e95048;
+    font-size: 12px;
+    height: 17px;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .boxs-num .type {
         margin-top: 40px;
@@ -555,7 +563,7 @@ h3,
         margin: 0;
         width: 100%;
     }
-    .tab-hot >.tab-item{
+    .tab-hot>.tab-item {
         cursor: pointer;
     }
     .tab-item {
