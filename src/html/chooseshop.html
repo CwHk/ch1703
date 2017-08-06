@@ -396,12 +396,12 @@
                             登录类型：
                         </div>
                         <div class="choose-let">
-                            <div class="itemsbtn active">设置密码</div>
+                            <div class="itemsbtn first active">设置密码</div>
                             <div class="itemsbtn second">自动生成密码</div>
-                            <div class="ptop-text-detail">请记住您所设置的密码。如果遗忘，可登录云服务器控制平台进行密码重制</div>
+                            <div class="ptop-text-detail tipone">注： 请记住您所设置的密码。如果遗忘，可登录云服务器控制平台进行密码重制</div>
                         </div>
                     </div>
-                    <div class="itemboxs clearfix">
+                    <div class="itemboxs loginPsd clearfix">
                         <div class="l-name">
                             登录密码：
                         </div>
@@ -416,7 +416,7 @@
                                 <>? 】）</div>
                         </div>
                     </div>
-                    <div class="itemboxs clearfix">
+                    <div class="itemboxs confirmPsd clearfix">
                         <div class="l-name">
                             确认密码：
                         </div>
@@ -617,10 +617,10 @@
         $(this).addClass("active")
         $(this).siblings('.item').removeClass('active');
     })
-    $('.choose-let .itemsbtn').click(function() {
-        $(this).addClass("active");
-        $(this).siblings().removeClass('active')
-    });
+    // $('.choose-let .itemsbtn').click(function() {
+    //     $(this).addClass("active");
+    //     $(this).siblings().removeClass('active')
+    // });
     $(window).scroll(function(){
         var $top = $(this).scrollTop();
         var windowWidth = $(window).width();
@@ -646,6 +646,19 @@
         $(this).parents('.item-box').remove();
         var _index = $('.jiaParentBox').index();
         // $('.text-zd span').html(4-_index);
+    });
+    $('.first').click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass('active');
+        $('.tipone').html('注： 请记住您所设置的密码。如果遗忘，可登录云服务器控制平台进行密码重制').css('color','#898989');
+        $('.loginPsd,.confirmPsd').show();
+
+    });
+    $('.second').click(function(){
+        $(this).addClass("active");
+        $(this).siblings().removeClass('active');
+        $('.tipone').html('注： 密码将通过短信发送到您的手机').css('color','red');
+        $('.loginPsd,.confirmPsd').hide();
     })
 </script>
 
