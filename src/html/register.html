@@ -27,7 +27,9 @@
                 </div>
                 <div class="col-sm-6 col-xs-6 phonebox">
                     <div class="row">
-                        <a href="../index.html"><div class="regiser">首页</div></a>
+                        <a href="../index.html">
+                            <div class="regiser">首页</div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -147,13 +149,25 @@
     </footer>
     <div class="fix_right">
         <div class="ybl_tell">
-            <img src="../images/ybl-tell.png">
+            <img src="../mages/ybl-tell.png">
+            <div class="lChi">
+                <img src="//www.qy.com.cn/new_version/images/arRIcon.png" class="ar" alt="在线客服">
+                <span class="txt">免费拨打  400 9699 221</span>
+            </div>
         </div>
         <div class="ybl_qq">
-            <img src="../images/ybl-qq.png">
+            <img src="../images/ybl-qq.png" class="qq">
+            <div class="lChi">
+                <img src="//www.qy.com.cn/new_version/images/arRIcon.png" class="ar" alt="在线客服">
+                <span class="txt">QQ 825196858</span>
+            </div>
         </div>
         <div class="ybl_wx">
             <img src="../images/ybl-wx.png">
+            <div class="lChi">
+                <img src="//www.qy.com.cn/new_version/images/arRIcon.png" class="ar" alt="在线客服">
+                <span class="txt">微信 825196858</span>
+            </div>
         </div>
     </div>
 </body>
@@ -161,49 +175,60 @@
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
 <script type="text/javascript">
-    $('.choose-sm input').click(function(){
-        if($(this).is(':checked')){
-            $('.submit-btn').css({'border':'2px solid #2f80d5','color':'#000'})
-        }else{
-            $('.submit-btn').css({'border':'2px solid #f3f3f3','color':'#d5d5d5'})
+    $('.choose-sm input').click(function() {
+        if ($(this).is(':checked')) {
+            $('.submit-btn').css({
+                'border': '2px solid #2f80d5',
+                'color': '#000'
+            })
+        } else {
+            $('.submit-btn').css({
+                'border': '2px solid #f3f3f3',
+                'color': '#d5d5d5'
+            })
         }
     })
-    $('.submit-btn').click(function(){
-        if($('.choose-sm input').is(':checked')){
+    $('.submit-btn').click(function() {
+        if ($('.choose-sm input').is(':checked')) {
 
-        }else{
+        } else {
             return false;
         }
     });
-    $('.code-btn').click(function(){
-        $(this).children('.text').html("重新发送"); 
-        if($(this).hasClass('disabled')){
+    $('.code-btn').click(function() {
+        $(this).children('.text').html("重新发送");
+        if ($(this).hasClass('disabled')) {
             return false;
-        }else{
+        } else {
             settime(this);
         }
     })
 
-    var countdown = 60; 
-    function settime(val) { 
-        if (countdown == 0) { 
-            $(val).removeClass("disabled");    
+    var countdown = 60;
+
+    function settime(val) {
+        if (countdown == 0) {
+            $(val).removeClass("disabled");
             $(val).find('.secondsTime').html('');
-            countdown = 60; 
-            $(val).css({'border':'1px solid #81b2e5','color':'#81b2e5'});
+            countdown = 60;
+            $(val).css({
+                'border': '1px solid #81b2e5',
+                'color': '#81b2e5'
+            });
             clearTimeout(timer1);
-        } else { 
-            $(val).addClass("disabled"); 
-            $(val).find('.secondsTime').html(countdown+'s'); 
-            $(val).css({'border':'1px solid #f3f3f3','color':'#d5d5d5'});
-            countdown--; 
-            var timer1 = setTimeout(function() { 
-                settime(val) 
-            },1000) 
+        } else {
+            $(val).addClass("disabled");
+            $(val).find('.secondsTime').html(countdown + 's');
+            $(val).css({
+                'border': '1px solid #f3f3f3',
+                'color': '#d5d5d5'
+            });
+            countdown--;
+            var timer1 = setTimeout(function() {
+                settime(val)
+            }, 1000)
         }
-    } 
-
-
+    }
 </script>
 
 </html>

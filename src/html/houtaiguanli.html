@@ -164,6 +164,29 @@
                     </div>
                 </div>
             </div>
+            <div class="white-box three-t">
+                <div class="top-wh clearfix">
+                    <div class="select-box">
+                        <select class="choosext">
+                            <option value="">WIndows</option>
+                            <option value="">WIndows</option>
+                            <option value="">WIndows</option>
+                            <option value="">WIndows</option>
+                            <option value="">WIndows</option>
+                        </select>
+                    </div>
+                    <div class="select-box">
+                        <select class="choosext">
+                            <option value="">WIndows</option>
+                            <option value="">WIndows</option>
+                            <option value="">WIndows</option>
+                            <option value="">WIndows</option>
+                            <option value="">WIndows</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="chartmain" style="width:800px; height: 400px;"></div>
+            </div>
             <div class="three threes">
                 <div class="three-box-confi">
                     <div class="t-textbox">
@@ -330,7 +353,101 @@
 <script src="../js/jquery-1.10.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
+<script src="../js/echarts-all.js"></script>
 <script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('chartmain'));
+
+    // var option = {
+    //     title: {
+    //         text: '流量趋势',
+    //     },
+    //     tooltip: {
+    //         trigger: 'axis'
+    //     },
+    //     legend: {
+    //         orient: 'vertical',
+    //         x: 'right',
+    //         data: ['总量', '点播加速', '网页加速']
+    //     },
+    //     toolbox: {
+    //         show: true,
+    //     },
+    //     calculable: true,
+    //     xAxis: [{
+    //         type: 'category',
+    //         boundaryGap: false,
+    //         data: ['01日', '03日', '05日', '07日', '09日', '11日', '13日', '15日', '17日', '19日', '21日', '23日', '25日', '27日', '29日', '31日']
+    //     }],
+    //     yAxis: [{
+    //         type: 'value',
+    //         axisLabel: {
+    //             formatter: '{value}.GB'
+    //         }
+    //     }],
+    //     series: [{
+    //         name: '成交',
+    //         type: 'line',
+    //         smooth: true,
+    //         data: [10, 12, 21, 54, 260, 830, 710]
+    //     }, {
+    //         name: '预购',
+    //         type: 'line',
+    //         smooth: true,
+    //         data: [30, 182, 434, 791, 390, 30, 10]
+    //     }, {
+    //         name: '意向',
+    //         type: 'line',
+    //         smooth: true,
+    //         data: [1320, 1132, 601, 234, 120, 90, 20]
+    //     }]
+    // };
+
+    var option = {
+        title: {
+            text: '流量趋势',
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'right',
+            data: ['总量', '点播加速', '网页加速']
+        },
+        toolbox: {
+            show: true,
+        },
+        calculable: true,
+        xAxis: [{
+            type: 'category',
+            boundaryGap: false,
+            data: ['01日', '03日', '05日', '07日', '09日', '11日', '13日', '15日', '17日', '19日', '21日', '23日', '25日', '27日', '29日', '31日']
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLabel: {
+                formatter: '{value}.GB'
+            }
+        }],
+        series: [{
+            name: '网页加速',
+            type: 'line',
+            smooth: true,
+            data: [10, 12, 21, 54, 260, 830, 710, 54, 260, 830, 710, 12, 21, 54, 260, 830, 710, 54, 260, 830, 710, 12, 21, 54, 260, 830, 710, 54, 260, 830, 710]
+        }, {
+            name: '点播加速',
+            type: 'line',
+            smooth: true,
+            data: [30, 182, 434, 791, 390, 30, 1030, 182, 434, 791, 390, 30, 10, 434, 791, 390, 30, 1030, 182, 434, 791, 390, 30, 434, 791, 390, 30, 1030, 182]
+        }, {
+            name: '总量',
+            type: 'line',
+            smooth: true,
+            data: [1320, 1132, 601, 82, 434, 791, 390, 30, 1030, 182, 434, 791, 390, 30, 10, 434, 791, 390, 30, 1030, 182, 232, 234, 120, , 120, 90, 20]
+        }]
+    };
+    //使用制定的配置项和数据显示图表
+    myChart.setOption(option);
 </script>
 
 </html>
