@@ -79,7 +79,7 @@
             <div class="row four">
                 <div class="col-sm-2 col-xs-6 col-sm-offset-2 col-xs-offset-0 text-center">
                     <div><img src="images/4-1yfw.png"></div>
-                    <p class='title-tops'>云服务</p>
+                    <p class='title-tops'>云服务器</p>
                     <p class="title-text">弹性计算，省钱省心</p>
                 </div>
                 <div class="col-sm-2 col-xs-6 text-center">
@@ -381,31 +381,7 @@
         </div>
         <div class="box-h mart-dt">
             <div class="jfdt">
-                <div class="col-xs-4 col-sm-4 gnjd">
-                    <select class="form-control" onchange="selectGuonei(this)">
-                        <option value="">国内服务器节点</option>
-                        <option value="黑龙江">黑龙江</option>
-                        <option value="辽宁">辽宁</option>
-                        <option value="浙江">浙江</option>
-                        <option value="成都">成都</option>
-                        <option value="佛山">佛山</option>
-                        <option value="广州">广州</option>
-                        <option value="汕尾">汕尾</option>
-                        <option value="台湾">台湾</option>
-                    </select>
-                </div>
-                <div class="col-xs-4 col-sm-4 gwjd">
-                    <select class="form-control" onchange="selectGuowai(this)">
-                        <option value="">国外服务器节点</option>
-                        <option value="美国">美国</option>
-                        <option value="德国">德国</option>
-                        <option value="日本">日本</option>
-                        <option value="菲律宾">菲律宾</option>
-                        <option value="泰国">泰国</option>
-                        <option value="新加坡">新加坡</option>
-                        <option value="印度尼西亚">印度尼西亚</option>
-                    </select>
-                </div>
+               	<div id="main" style="width: 800px;height:580px;"></div>
             </div>
             <div class="jfdt_detail">
                 <div>
@@ -519,6 +495,9 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="../js/china.js"></script>
+<script src="../js/world.js"></script>
 <script type="text/javascript">
     function selectGuonei(obj) {
         console.log(obj.selectedIndex);
@@ -531,6 +510,213 @@
         console.log(obj.value);
         $('.city').html(obj.value);
     }
+    //地图
+    var myChart = echarts.init(document.getElementById('main'));
+    var chinaMapData = {
+	    "佛山":[112.12 ,23.05],
+		"成都":[104.06,30.67],
+		"广州":[113.23,23.16],
+		"汕尾":[115.375279,22.786211],
+		"杭州":[120.19,30.26],
+		"沈阳":[123.38,41.8],
+		"哈尔滨":[126.63,45.75],
+		"台湾":[121.509062,25.044332]
+	};
+	var chinaYunAoData = [
+        {name: "佛山", value: "佛山高防"},
+        {name: "成都", value: "成都高防"},
+        {name: "广州", value: "广州高防"},
+        {name: "汕尾", value: "汕尾高防"},
+        {name: "杭州", value: "杭州高防"},
+        {name: "沈阳", value: "沈阳高防"},
+        {name: "哈尔滨", value: "哈尔滨高防"},
+        {name: "台湾", value: "台湾高防"}
+    ];
+	var worldMapData = {
+	    "美国":[38.53 ,77.01],
+		"德国":[52.31,13.20],
+		"日本":[139.46,35.42],
+		"菲律宾":[120.59,14.35],
+		"泰国":[100.31,13.45],
+		"新加坡":[103.51,1.17],
+		"印度尼西亚":[106.48,-6.1]
+	};
+	var worldYunAoData = [
+        {name: "美国", value: "美国高防"},
+        {name: "德国", value: "德国高防"},
+        {name: "日本", value: "日本高防"},
+        {name: "菲律宾", value: "菲律宾高防"},
+        {name: "泰国", value: "泰国高防"},
+        {name: "新加坡", value: "新加坡高防"},
+        {name: "印度尼西亚", value: "印度尼西亚高防"}
+    ];
+
+	// var geoCoordMap = chinaMapData;
+	// var geoCoordMap = worldMapData;
+	var convertData = function (geoCoordMap,data) {
+	    var res = [];
+	    for (var i = 0; i < data.length; i++) {
+	        var geoCoord = geoCoordMap[data[i].name];
+	        if (geoCoord) {
+	            res.push({
+	                name: data[i].name,
+	                value: geoCoord.concat(data[i].value)
+	            });
+	        }
+	    }
+	    return res;
+	};
+	var chinaSeriesData = convertData(chinaMapData,chinaYunAoData);
+	var worldSeriesData = convertData(worldMapData,worldYunAoData);
+
+	var option = {
+	    backgroundColor: 'transparent',
+	    title: {
+	        text: '云奥服务器分布',
+	        subtext: '国内分布',
+	        sublink: 'http://www.yunao.com',
+	        x:'center',
+	        y:'20',
+	        textStyle: {
+	            color: '#000'
+	        }
+	    },
+	    tooltip: {
+	        trigger: 'item',
+	        formatter: function (params) {
+	            return params.name + ' : ' + params.value[2];
+	        }
+	    },
+	    legend: {
+	        orient: 'vertical',
+	        y: '20',
+	        x:'right',
+	        data:['国内服务器','国外服务器'],
+	        textStyle: {
+	            color: '#000'
+	        },
+	        selectedMode: 'single'
+	    },
+	    // visualMap: {     //item数值分阶段
+	    //     min: 0,
+	    //     max: 200,
+	    //     calculable: true,
+	    //     show: false,
+	    //     inRange: {
+	    //         color: ['#50a3ba',]
+	    //     },
+	    //     textStyle: {
+	    //         color: '#fff'
+	    //     }
+	    // },
+	    geo: {
+	        map: 'china',         //地图基于中国地图
+	        label: {
+	            emphasis: {       //鼠标放上是否显示各个省份的名称
+	                show: false 
+	            }
+	        },
+	        itemStyle: {
+	            normal: { 
+	                areaColor: '#323c48',  //#e7f0f2  默认时省份的颜色
+	                borderColor: '#111'    //省份时的边框颜色
+	            },
+	            emphasis: {
+	                //areaColor: '#fff'    //鼠标放上省份时的颜色
+	                areaColor: '#2a333d'    //鼠标放上省份时的颜色
+	            }
+	        }
+	    },
+	    series: [
+	        {
+	            name: '国内服务器',
+	            // type: 'scatter',  
+	            type: 'effectScatter',
+	            coordinateSystem: 'geo',
+	            // data: convertData(chinaYunAoData),
+	            data: chinaSeriesData,
+	            symbolSize: 12,
+	            // symbolSize: function (val) {
+	            //     return val[2] / 10;
+	            // },
+	            label: {
+	                normal: {         //默认时是否显示各个项的信息
+	                    formatter: '{b}',     //{a}代表 服务器，{b}代表位置名称{c}代表后面的信息
+	                    position: 'right',    //显示位置
+	                    show: false
+	                },
+	                emphasis: {       //鼠标放上是否显示各个省份的名称
+	                    show: false
+	                }
+	            },
+	            itemStyle: {
+	            	normal: {
+	                    color: '#50a3ba',
+	                    shadowBlur: 10,
+	                    shadowColor: '#333'
+	                },
+	                emphasis: {           //鼠标放到选中的那一项上时该项的样式
+	                    borderColor: '#fff',
+	                    borderWidth: 1,
+	                    color: '#50a3ba'   //中间背景色     
+	                }
+	            }
+	        },
+	        {
+	            name: '国外服务器',
+	            // type: 'scatter',  
+	            type: 'effectScatter',
+	            coordinateSystem: 'geo',
+	            // data: convertData(chinaYunAoData),
+	            data: worldSeriesData,
+	            symbolSize: 12,
+	            // symbolSize: function (val) {
+	            //     return val[2] / 10;
+	            // },
+	            label: {
+	                normal: {         //默认时是否显示各个项的信息
+	                    formatter: '{b}',     //{a}代表 服务器，{b}代表位置名称{c}代表后面的信息
+	                    position: 'right',    //显示位置
+	                    show: false
+	                },
+	                emphasis: {       //鼠标放上是否显示各个省份的名称
+	                    show: false
+	                }
+	            },
+	            itemStyle: {
+	            	normal: {
+	                    color: '#50a3ba',
+	                    shadowBlur: 10,
+	                    shadowColor: '#333'
+	                },
+	                emphasis: {           //鼠标放到选中的那一项上时该项的样式
+	                    borderColor: '#fff',
+	                    borderWidth: 1,
+	                    color: '#50a3ba'   //中间背景色     
+	                }
+	            }
+	        }
+	    ]
+	}
+	myChart.setOption(option);
+	myChart.on('click', function (params) {
+		if(params.componentType === 'series'){
+			$('.city').html(params.name);
+		    console.log(params.name);
+		    console.log(params.value);
+		}
+	});
+	myChart.on('legendselectchanged', function (params) {
+		if(params.name=='国内服务器'){
+			option.title.subtext = "国内分布";
+			option.geo.map = "china";
+		    myChart.setOption(option);
+		}else{
+			option.title.subtext = "国外分布";
+			option.geo.map = "world";
+		    myChart.setOption(option);
+		}
+	});
 </script>
 
 </html>

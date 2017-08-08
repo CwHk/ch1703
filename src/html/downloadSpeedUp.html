@@ -287,14 +287,15 @@
         pagination: '.swiper-pagination',
         paginationClickable: true
     });
-    $('nav .CDN').on("click", function() {
-        if (!$(this).hasClass('active')) {
+    $('nav .CDN').on({
+        mouseover:function(){
             $(this).addClass("active");
             $(this).find('.toggle_box').show();
-        } else {
+        },  
+        mouseout:function(){
             $(this).removeClass("active");
             $(this).find('.toggle_box').hide();
-        }
+        }  
     });
 </script>
 

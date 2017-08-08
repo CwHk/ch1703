@@ -422,12 +422,15 @@ h3,
 
 .mart-dt .jfdt {
     height: 600px;
-    // background: url('../images/guoneijf.png') no-repeat center center;
-    background-image: url(../images/guoneijf.png);
+    // background-image: url(../images/guoneijf.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80% 80%;
     position: relative;
+}
+
+.mart-dt .jfdt #main{
+    margin: 0 auto  ;
 }
 
 .mart-dt .jfdt .gnjd {
