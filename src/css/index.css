@@ -448,7 +448,8 @@ h3,
 
 .mart-dt .jfdt_detail {
     background: #fff;
-    height: 242px;
+    // height: 242px;
+    height: 220px;
     position: relative;
 }
 
@@ -473,6 +474,28 @@ h3,
 
 .mart-dt .jfdt_detail>div .city_feature {
     top: 76px;
+}
+
+.mart-dt .jfinfo{
+    background: #fff;
+}
+
+.mart-dt .jfinfo .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+.mart-dt .jfinfo .item{
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+}
+
+.mart-dt .jfinfo .item>div{
+    width: 120px;
 }
 
 .mart-dt .no_margin {

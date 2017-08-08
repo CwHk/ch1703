@@ -381,7 +381,7 @@
         </div>
         <div class="box-h mart-dt">
             <div class="jfdt">
-               	<div id="main" style="width: 800px;height:580px;"></div>
+               	<div id="main" style="width: 800px;height:600px;"></div>
             </div>
             <div class="jfdt_detail">
                 <div>
@@ -390,6 +390,27 @@
                         <b class="city">佛山</b>
                         <b class="city_feature">高防双线</b>
                     </div>
+                </div>
+            </div>
+            <div class="jfinfo">
+                <div class="container">
+                	<div>
+	                	<div class="item">
+	                		<div>数据中心:</div><span class="fwq_sjzx">AAAA级	南宁电信参观机房</span>
+	                	</div>
+	                	<div class="item">
+	                		<div>电力保障:</div><span class="fwq_dlbz">两路一类市电采用10KV三相线路，互为主备用。</span>
+	                	</div>
+	                	<div class="item">
+	                		<div>服务支持:</div><span class="fwq_fwzc">365×7×24</span>
+	                	</div>
+	                	<div class="item">
+	                		<div>出口带宽:</div><span class="fwq_ckdk">500G</span>
+	                	</div>
+	                	<div class="item">
+	                		<div>地址:</div><span class="fwq_dz">南宁市新商业中心的五象广场旁边</span>
+	                	</div>
+	                </div>
                 </div>
             </div>
             <div class="no_margin">
@@ -517,20 +538,30 @@
 		"成都":[104.06,30.67],
 		"广州":[113.23,23.16],
 		"汕尾":[115.375279,22.786211],
-		"杭州":[120.19,30.26],
-		"沈阳":[123.38,41.8],
-		"哈尔滨":[126.63,45.75],
+		"浙江":[120.19,30.26],
+		"辽宁":[123.38,41.8],
+		"黑龙江":[126.63,45.75],
 		"台湾":[121.509062,25.044332]
 	};
-	var chinaYunAoData = [
-        {name: "佛山", value: "佛山高防"},
-        {name: "成都", value: "成都高防"},
-        {name: "广州", value: "广州高防"},
-        {name: "汕尾", value: "汕尾高防"},
-        {name: "杭州", value: "杭州高防"},
-        {name: "沈阳", value: "沈阳高防"},
-        {name: "哈尔滨", value: "哈尔滨高防"},
-        {name: "台湾", value: "台湾高防"}
+	// var chinaYunAoData = [
+ //        {name: "佛山", value: "佛山高防"},
+ //        {name: "成都", value: "成都高防"},
+ //        {name: "广州", value: "广州高防"},
+ //        {name: "汕尾", value: "汕尾高防"},
+ //        {name: "浙江", value: "浙江高防"},
+ //        {name: "辽宁", value: "辽宁高防"},
+ //        {name: "黑龙江", value: "黑龙江高防"},
+ //        {name: "台湾", value: "台湾高防"}
+ //    ];
+    var chinaYunAoData = [
+        {name: "佛山", value: {name:"佛山高防",data:{sjzx:"AAAA级	佛山电信参观机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"500G",dz:"佛山市新商业中心的五象广场旁边"}}},
+        {name: "成都", value: {name:"成都高防",data:{sjzx:"AAAA级	成都电信参观机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"500G",dz:"成都市新商业中心的五象广场旁边"}}},
+        {name: "广州", value: {name:"广州高防",data:{sjzx:"AAAA级	广州电信参观机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"500G",dz:"广州市新商业中心的五象广场旁边"}}},
+        {name: "汕尾", value: {name:"汕尾高防",data:{sjzx:"AAAA级	汕尾电信参观机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"500G",dz:"汕尾市新商业中心的五象广场旁边"}}},
+        {name: "浙江", value: {name:"浙江高防",data:{sjzx:"AAAA级	浙江电信参观机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"500G",dz:"杭州市新商业中心的五象广场旁边"}}},
+        {name: "辽宁", value: {name:"辽宁高防",data:{sjzx:"AAAA级	辽宁电信参观机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"500G",dz:"沈阳市新商业中心的五象广场旁边"}}},
+        {name: "黑龙江", value: {name:"黑龙江高防",data:{sjzx:"AAAA级	黑龙江电信参观机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"500G",dz:"哈尔滨市新商业中心的五象广场旁边"}}},
+        {name: "台湾", value: {name:"台湾高防",data:{sjzx:"AAAA级	台湾电信参观机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"500G",dz:"台北市新商业中心的五象广场旁边"}}}
     ];
 	var worldMapData = {
 	    "美国":[38.53 ,77.01],
@@ -584,7 +615,8 @@
 	    tooltip: {
 	        trigger: 'item',
 	        formatter: function (params) {
-	            return params.name + ' : ' + params.value[2];
+	        	// console.log(params);
+	            return params.name + ' : ' + params.value[2].name;
 	        }
 	    },
 	    legend: {
@@ -657,7 +689,7 @@
 	                },
 	                emphasis: {           //鼠标放到选中的那一项上时该项的样式
 	                    borderColor: '#fff',
-	                    borderWidth: 1,
+	                    borderWidth: 2,
 	                    color: '#50a3ba'   //中间背景色     
 	                }
 	            }
@@ -691,7 +723,7 @@
 	                },
 	                emphasis: {           //鼠标放到选中的那一项上时该项的样式
 	                    borderColor: '#fff',
-	                    borderWidth: 1,
+	                    borderWidth: 2,
 	                    color: '#50a3ba'   //中间背景色     
 	                }
 	            }
@@ -702,8 +734,13 @@
 	myChart.on('click', function (params) {
 		if(params.componentType === 'series'){
 			$('.city').html(params.name);
-		    console.log(params.name);
-		    console.log(params.value);
+			$('.fwq_sjzx').html(params.value[2].data.sjzx);
+			$('.fwq_dlbz').html(params.value[2].data.dlbz);
+			$('.fwq_fwzc').html(params.value[2].data.fwzc);
+			$('.fwq_ckdk').html(params.value[2].data.ckdk);
+			$('.fwq_dz').html(params.value[2].data.dz);
+		    // console.log(params.name);
+		    // console.log(params.value[2].data);
 		}
 	});
 	myChart.on('legendselectchanged', function (params) {
