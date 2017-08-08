@@ -177,7 +177,7 @@ header .container {
         width: 90%;
         height: auto;
     }
-    .phone {
-        display: block;
+    .logobox .phone {
+        display: none;
     }
 }
