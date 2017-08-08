@@ -390,6 +390,7 @@ section {
 .top-wh {
     padding-top: 28px;
     padding-bottom: 12px;
+    padding-right: 164px;
 }
 
 .select-box {
@@ -430,4 +431,28 @@ section {
     background: url(../images/go-bottom.png) no-repeat;
     background-position: center center;
     background-size: 12px 7px;
+}
+
+#chartmain {
+    padding: 0 50px;
+}
+
+.bb-box-detail {
+    line-height: 40px;
+    padding: 0 60px 40px 60px;
+    .hjfw {
+        padding-right: 50px;
+        font-size: 16px;
+        float: left;
+    }
+    .text-db {
+        color: #010000;
+        width: 160px;
+        text-align: center;
+        border-right: 2px solid #1872d0;
+        float: left;
+    }
+    .born {
+        border: none;
+    }
 }

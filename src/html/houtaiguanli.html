@@ -185,7 +185,15 @@
                         </select>
                     </div>
                 </div>
-                <div id="chartmain" style="width:800px; height: 400px;"></div>
+                <div id="chartmain" style="width:1200px; height: 344px;"></div>
+                <div class="bb-box-detail clearfix">
+                    <span class="hjfw">各服务计费流量：</span>
+                    <div class="text-db">点播加速： 0.0 Gb</div>
+                    <div class="text-db">直播加速： 0.0 Gb</div>
+                    <div class="text-db">网页加速： 0.0 Gb</div>
+                    <div class="text-db">下载加速： 0.0 Gb</div>
+                    <div class="text-db born">P2P加速： 0.0 Gb</div>
+                </div>
             </div>
             <div class="three threes">
                 <div class="three-box-confi">
@@ -357,64 +365,17 @@
 <script type="text/javascript">
     var myChart = echarts.init(document.getElementById('chartmain'));
 
-    // var option = {
-    //     title: {
-    //         text: '流量趋势',
-    //     },
-    //     tooltip: {
-    //         trigger: 'axis'
-    //     },
-    //     legend: {
-    //         orient: 'vertical',
-    //         x: 'right',
-    //         data: ['总量', '点播加速', '网页加速']
-    //     },
-    //     toolbox: {
-    //         show: true,
-    //     },
-    //     calculable: true,
-    //     xAxis: [{
-    //         type: 'category',
-    //         boundaryGap: false,
-    //         data: ['01日', '03日', '05日', '07日', '09日', '11日', '13日', '15日', '17日', '19日', '21日', '23日', '25日', '27日', '29日', '31日']
-    //     }],
-    //     yAxis: [{
-    //         type: 'value',
-    //         axisLabel: {
-    //             formatter: '{value}.GB'
-    //         }
-    //     }],
-    //     series: [{
-    //         name: '成交',
-    //         type: 'line',
-    //         smooth: true,
-    //         data: [10, 12, 21, 54, 260, 830, 710]
-    //     }, {
-    //         name: '预购',
-    //         type: 'line',
-    //         smooth: true,
-    //         data: [30, 182, 434, 791, 390, 30, 10]
-    //     }, {
-    //         name: '意向',
-    //         type: 'line',
-    //         smooth: true,
-    //         data: [1320, 1132, 601, 234, 120, 90, 20]
-    //     }]
-    // };
 
     var option = {
         title: {
             text: '流量趋势',
         },
         grid: {
-            x: 80,
+            x: 60,
             y: 45,
-            x2: 120,
-            y2: 90,
+            x2: 130,
+            y2: 80,
             borderWidth: 1
-        },
-        tooltip: {
-            trigger: 'axis'
         },
         toolbox: {
             show: true,
@@ -439,10 +400,13 @@
         series: [{
             name: '网页加速',
             type: 'line',
+            symbol: 'emptyCircle', //节点为圆
             data: [10, 15, 70, 500, 100, 4390, 30, 1030, 12]
         }, {
             name: '点播加速',
             type: 'line',
+            symbol: 'emptyCircle',
+
             data: [30, 182, 430, 182, 4390, 30, 1030, 182, 13]
         }]
     };
