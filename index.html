@@ -396,19 +396,19 @@
                 <div class="container">
                 	<div>
 	                	<div class="item">
-	                		<div>数据中心:</div><span class="fwq_sjzx">AAAA级	南宁电信参观机房</span>
+	                		<div>数据中心：</div><span class="fwq_sjzx">AAAA级	南宁电信参观机房</span>
 	                	</div>
 	                	<div class="item">
-	                		<div>电力保障:</div><span class="fwq_dlbz">两路一类市电采用10KV三相线路，互为主备用。</span>
+	                		<div>电力保障：</div><span class="fwq_dlbz">两路一类市电采用10KV三相线路，互为主备用。</span>
 	                	</div>
 	                	<div class="item">
-	                		<div>服务支持:</div><span class="fwq_fwzc">365×7×24</span>
+	                		<div>服务支持：</div><span class="fwq_fwzc">365×7×24</span>
 	                	</div>
 	                	<div class="item">
-	                		<div>出口带宽:</div><span class="fwq_ckdk">500G</span>
+	                		<div>出口带宽：</div><span class="fwq_ckdk">500G</span>
 	                	</div>
 	                	<div class="item">
-	                		<div>地址:</div><span class="fwq_dz">南宁市新商业中心的五象广场旁边</span>
+	                		<div>地址：</div><span class="fwq_dz">南宁市新商业中心的五象广场旁边</span>
 	                	</div>
 	                </div>
                 </div>
@@ -572,16 +572,24 @@
 		"新加坡":[103.51,1.17],
 		"印度尼西亚":[106.48,-6.1]
 	};
-	var worldYunAoData = [
-        {name: "美国", value: "美国高防"},
-        {name: "德国", value: "德国高防"},
-        {name: "日本", value: "日本高防"},
-        {name: "菲律宾", value: "菲律宾高防"},
-        {name: "泰国", value: "泰国高防"},
-        {name: "新加坡", value: "新加坡高防"},
-        {name: "印度尼西亚", value: "印度尼西亚高防"}
+	// var worldYunAoData = [
+ //        {name: "美国", value: "美国高防"},
+ //        {name: "德国", value: "德国高防"},
+ //        {name: "日本", value: "日本高防"},
+ //        {name: "菲律宾", value: "菲律宾高防"},
+ //        {name: "泰国", value: "泰国高防"},
+ //        {name: "新加坡", value: "新加坡高防"},
+ //        {name: "印度尼西亚", value: "印度尼西亚高防"}
+ //    ];
+ 	var worldYunAoData = [
+        {name: "美国", value: {name:"美国高防",data:{sjzx:"AAAA级机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"500G",dz:"华盛顿市新商业中心的五象广场旁边"}}},
+        {name: "德国", value: {name:"德国高防",data:{sjzx:"AAAA级机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"600G",dz:"柏林市新商业中心的五象广场旁边"}}},
+        {name: "日本", value: {name:"日本高防",data:{sjzx:"AAAA级机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"700G",dz:"东京市新商业中心的五象广场旁边"}}},
+        {name: "菲律宾", value: {name:"菲律宾高防",data:{sjzx:"AAAA级机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"800G",dz:"马尼拉市新商业中心的五象广场旁边"}}},
+        {name: "泰国", value: {name:"泰国高防",data:{sjzx:"AAAA级机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"900G",dz:"曼谷市新商业中心的五象广场旁边"}}},
+        {name: "新加坡", value: {name:"新加坡高防",data:{sjzx:"AAAA级机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"500G",dz:"新加坡市新商业中心的五象广场旁边"}}},
+        {name: "印度尼西亚", value: {name:"印度尼西亚高防",data:{sjzx:"AAAA级机房",dlbz:"两路一类市电采用10KV三相线路，互为主备用。",fwzc:"365×7×24",ckdk:"1000G",dz:"雅加达市新商业中心的五象广场旁边"}}}
     ];
-
 	// var geoCoordMap = chinaMapData;
 	// var geoCoordMap = worldMapData;
 	var convertData = function (geoCoordMap,data) {
@@ -739,7 +747,7 @@
 			$('.fwq_fwzc').html(params.value[2].data.fwzc);
 			$('.fwq_ckdk').html(params.value[2].data.ckdk);
 			$('.fwq_dz').html(params.value[2].data.dz);
-		    // console.log(params.name);
+		    console.log(params.name);
 		    // console.log(params.value[2].data);
 		}
 	});
