@@ -141,7 +141,7 @@ body {
                 margin-left: 150px;
                 max-width: 700px;
                 font-size: 14px;
-                .rightTopBox{
+                .rightTopBox {
                     .item-box {
                         width: 172px;
                         margin-top: 9px;
@@ -261,7 +261,8 @@ body {
                     -moz-appearance: none;
                     -webkit-appearance: none;
                 }
-                .choosext,.choosenh {
+                .choosext,
+                .choosenh {
                     width: 130px;
                     height: 32px;
                     padding: 0 13px;
@@ -368,7 +369,7 @@ body {
         }
         .num-text {
             height: 47px;
-            padding-top: 24px;
+            padding-top: 8px;
             position: relative;
         }
         .schedule-item {
@@ -390,6 +391,16 @@ body {
             .config002 {
                 position: absolute;
                 left: 12.5%;
+            }
+            .config0002 {
+                position: absolute;
+                left: 9.43333%;
+                height: 24px;
+                width: 24px;
+                top: -10px;
+                border: 1px solid #1873d0;
+                background: url(../images/zhtkz.png) no-repeat center center;
+                background-size: 100% 100%;
             }
             .config003 {
                 position: absolute;
@@ -427,9 +438,29 @@ body {
                 position: absolute;
                 left: 16.6666666%;
             }
+            .config2o {
+                position: absolute;
+                left: 16.16666666%;
+                height: 24px;
+                width: 24px;
+                top: -10px;
+                border: 1px solid #1873d0;
+                background: url(../images/zhtkz.png) no-repeat center center;
+                background-size: 100% 100%;
+            }
             .config02 {
                 position: absolute;
                 left: 8.33333%;
+            }
+            .config021 {
+                position: absolute;
+                left: 9.53333%;
+                height: 24px;
+                width: 24px;
+                top: -10px;
+                border: 1px solid #1873d0;
+                background: url(../images/zhtkz.png) no-repeat center center;
+                background-size: 100% 100%;
             }
             .config3 {
                 position: absolute;
@@ -509,7 +540,7 @@ body {
                 margin-top: 11px;
                 .schedule-config-l1 {
                     position: absolute;
-                    width: 51%;
+                    width: 9.9333%;
                     height: 10px;
                     left: -1px;
                     background: url(../images/jindutiao.png) no-repeat center center;
@@ -518,7 +549,7 @@ body {
                 }
                 .schedule-config-l {
                     position: absolute;
-                    width: 83.86533333%;
+                    width: 16.333333%;
                     height: 10px;
                     left: -1px;
                     background: url(../images/jindutiao.png) no-repeat center center;
@@ -674,7 +705,7 @@ body {
         float: left;
         cursor: pointer;
     }
-    .second{
+    .second {
         width: 136px;
     }
     .inp-text {
@@ -856,4 +887,12 @@ body {
             }
         }
     }
+}
+
+.cc {
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    color: #1872d0;
+    font-weight: 600;
 }
