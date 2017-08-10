@@ -255,9 +255,9 @@
                         <div class="schedule-name">带宽：</div>
                         <div class="schedule-item clearfix">
                             <div class="schedule-config">
-                                <div class="schedule-config-l"></div>
+                                <div class="schedule-config-l schedule-config-ls"></div>
                                 <div class="config-q config1"></div>
-                                <div class="config-q config2o"></div>
+                                <div class="config-q config2o mosuemo"></div>
                                 <div class="config-q config-h config7"></div>
                             </div>
                             <div class="num-text">
@@ -284,9 +284,9 @@
                         <div class="schedule-name">防御值：</div>
                         <div class="schedule-item clearfix">
                             <div class="schedule-config">
-                                <div class="schedule-config-l1"></div>
+                                <div class="schedule-config-l1 schedule-config-ls"></div>
                                 <div class="config-q config1"></div>
-                                <div class="config-q config021"></div>
+                                <div class="config-q config021 mosuemo"></div>
                                 <div class="config-q config-h config13"></div>
                             </div>
                             <div class="num-text">
@@ -319,9 +319,9 @@
                         <div class="schedule-name">时长：</div>
                         <div class="schedule-item clearfix">
                             <div class="schedule-config">
-                                <div class="schedule-config-l1"></div>
+                                <div class="schedule-config-l1 schedule-config-ls"></div>
                                 <div class="config-q config1"></div>
-                                <div class="config-q config0002"></div>
+                                <div class="config-q config0002 mosuemo"></div>
                                 <div class="config-q config-h   config009"></div>
                                 <div class="th-icon config006"></div>
                                 <div class="th-icon config007"></div>
@@ -596,7 +596,47 @@
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/swiper.min.js"></script>
 <script type="text/javascript">
-    document.onselectstart=new Function("return false");
+    var tag = false,
+        ox = 0,
+        left = 0,
+        bgleft = 0;
+    $('.schedule-item').mousedown(function(e) {
+        ox = e.pageX - left;
+        tag = true;
+    });
+    $(document).mouseup(function() {
+        tag = false;
+    });
+    $('.schedule-item').mousemove(function(e) { //鼠标移动
+        if (tag) {
+            left = e.pageX - ox;
+            if (left <= 0) {
+                left = 0;
+            } else if (left > 890) {
+                left = 890;
+            }
+            $(this).find('.mosuemo').css('left', left);
+            $(this).find('.schedule-config-ls').width(left);
+            //百分比   parseInt((left/890)*100) + '%
+        }
+    });
+    $('.schedule-config').click(function(e) { //鼠标点击
+        if (!tag) {
+            bgleft = $('.schedule-config').offset().left;
+            left = e.pageX - bgleft;
+            if (left <= 0) {
+                left = 0;
+            } else if (left > 890) {
+                left = 890;
+            }
+            $(this).find('.mosuemo').css('left', left);
+            $(this).find('.schedule-config-ls').animate({
+                width: left
+            }, 300);
+            //百分比   parseInt((left/890)*100) + '%
+        }
+    });
+    document.onselectstart = new Function("return false");
     var versionData;
     $.ajax({
         type: "GET",
@@ -669,98 +709,98 @@
     });
 
     $('.num .jia').on("click", function() {
-        var _num = strToNum($('.num input').val())*1+1;
-        $('.num input').val(_num+' 台');
-        $('.bottomPz_sl').html(_num+'台');
+        var _num = strToNum($('.num input').val()) * 1 + 1;
+        $('.num input').val(_num + ' 台');
+        $('.bottomPz_sl').html(_num + '台');
         $('.fk_sl').html(_num);
         countPrice();
     });
     $('.num .jian').on("click", function() {
-        var _num = strToNum($('.num input').val())*1-1;
-        if(_num==-1){
+        var _num = strToNum($('.num input').val()) * 1 - 1;
+        if (_num == -1) {
             return false;
         }
-        $('.num input').val(_num+' 台');
-        $('.bottomPz_sl').html(_num+'台');
+        $('.num input').val(_num + ' 台');
+        $('.bottomPz_sl').html(_num + '台');
         $('.fk_sl').html(_num);
         countPrice();
     });
     $('.num input').on("input", function() {
-        var _num = strToNum($(this).val())*1;
-        $('.bottomPz_sl').html(_num+'台');
+        var _num = strToNum($(this).val()) * 1;
+        $('.bottomPz_sl').html(_num + '台');
         $('.fk_sl').html(_num);
         countPrice();
     });
 
     $('.choosedk .jia').on("click", function() {
-        var _num = strToNum($('.choosedk input').val())*1+1;
-        $('.choosedk input').val(_num+' M');
-        $('.bottomPz_dk').html(_num+'M');
-        $('.fk_dk').html(_num+'M');
+        var _num = strToNum($('.choosedk input').val()) * 1 + 1;
+        $('.choosedk input').val(_num + ' M');
+        $('.bottomPz_dk').html(_num + 'M');
+        $('.fk_dk').html(_num + 'M');
         countPrice();
     });
     $('.choosedk .jian').on("click", function() {
-        var _num = strToNum($('.choosedk input').val())*1-1;
-        if(_num==-1){
+        var _num = strToNum($('.choosedk input').val()) * 1 - 1;
+        if (_num == -1) {
             return false;
         }
-        $('.choosedk input').val(_num+' M');
-        $('.bottomPz_dk').html(_num+'M');
-        $('.fk_dk').html(_num+'M');
+        $('.choosedk input').val(_num + ' M');
+        $('.bottomPz_dk').html(_num + 'M');
+        $('.fk_dk').html(_num + 'M');
         countPrice();
     });
     $('.choosedk input').on("input", function() {
-        var _num = strToNum($(this).val())*1;
-        $('.bottomPz_dk').html(_num+'M');
-        $('.fk_dk').html(_num+'M');
+        var _num = strToNum($(this).val()) * 1;
+        $('.bottomPz_dk').html(_num + 'M');
+        $('.fk_dk').html(_num + 'M');
         countPrice();
     });
 
     $('.choosefyz .jia').on("click", function() {
-        var _num = strToNum($('.choosefyz input').val())*1+1;
-        $('.choosefyz input').val(_num+' G');
-        $('.bottomPz_fyz').html(_num+'G');
-        $('.fk_fyz').html(_num+'G');
+        var _num = strToNum($('.choosefyz input').val()) * 1 + 1;
+        $('.choosefyz input').val(_num + ' G');
+        $('.bottomPz_fyz').html(_num + 'G');
+        $('.fk_fyz').html(_num + 'G');
         countPrice();
     });
     $('.choosefyz .jian').on("click", function() {
-        var _num = strToNum($('.choosefyz input').val())*1-1;
-        if(_num==-1){
+        var _num = strToNum($('.choosefyz input').val()) * 1 - 1;
+        if (_num == -1) {
             return false;
         }
-        $('.choosefyz input').val(_num+' G');
-        $('.bottomPz_fyz').html(_num+'G');
-        $('.fk_fyz').html(_num+'G');
+        $('.choosefyz input').val(_num + ' G');
+        $('.bottomPz_fyz').html(_num + 'G');
+        $('.fk_fyz').html(_num + 'G');
         countPrice();
     });
     $('.choosefyz input').on("input", function() {
-        var _num = strToNum($(this).val())*1;
-        $('.bottomPz_fyz').html(_num+'G');
-        $('.fk_fyz').html(_num+'G');
+        var _num = strToNum($(this).val()) * 1;
+        $('.bottomPz_fyz').html(_num + 'G');
+        $('.fk_fyz').html(_num + 'G');
         countPrice();
     });
 
     $('.choosesc .jia').on("click", function() {
-        var _num = strToNum($('.choosesc input').val())*1+1;
-        $('.choosesc input').val(_num+' 月');
-        $('.bottomPz_sc').html(_num+'月');
-        $('.fk_sc').html(_num+'月');
+        var _num = strToNum($('.choosesc input').val()) * 1 + 1;
+        $('.choosesc input').val(_num + ' 月');
+        $('.bottomPz_sc').html(_num + '月');
+        $('.fk_sc').html(_num + '月');
         countPrice();
     });
     $('.choosesc .jian').on("click", function() {
-        var _num = strToNum($('.choosesc input').val())*1-1;
-        if(_num==-1){
+        var _num = strToNum($('.choosesc input').val()) * 1 - 1;
+        if (_num == -1) {
             return false;
         }
-        $('.choosesc input').val(_num+' 月');
-        $('.bottomPz_sc').html(_num+'月');
-        $('.fk_sc').html(_num+'月');
+        $('.choosesc input').val(_num + ' 月');
+        $('.bottomPz_sc').html(_num + '月');
+        $('.fk_sc').html(_num + '月');
         countPrice();
     });
     $('.choosesc input').on("input", function() {
-        var _num = strToNum($(this).val())*1;
-        $('.bottomPz_sc').html(_num+'月');
-        $('.fk_sc').html(_num+'月');
+        var _num = strToNum($(this).val()) * 1;
+        $('.bottomPz_sc').html(_num + '月');
+        $('.fk_sc').html(_num + '月');
         countPrice();
     });
 
@@ -799,20 +839,21 @@
         var _index = $('.jiaParentBox').index();
         // $('.text-zd span').html(4-_index);
         var num = count_sjp();
-        $('.fk_sjp').html(num+' Gb SSD');
-        $('.bottomPz_sjp').html(num+' Gb SSD');
+        $('.fk_sjp').html(num + ' Gb SSD');
+        $('.bottomPz_sjp').html(num + ' Gb SSD');
     });
-    $('.select-box').on('input','input',function(){
+    $('.select-box').on('input', 'input', function() {
         var input_val = $(this).val().replace(/[^\d]/g, '');
         $(this).val(input_val);
         var num = count_sjp();
-        $('.fk_sjp').html(num+' Gb SSD');
-        $('.bottomPz_sjp').html(num+' Gb SSD');
+        $('.fk_sjp').html(num + ' Gb SSD');
+        $('.bottomPz_sjp').html(num + ' Gb SSD');
     })
-    function count_sjp(){
-        var total = parseInt(0,10);
-        $('.choosesjp .item-box:not(:last)').each(function(index,item){
-            total += $(this).find('input').val()*1;
+
+    function count_sjp() {
+        var total = parseInt(0, 10);
+        $('.choosesjp .item-box:not(:last)').each(function(index, item) {
+            total += $(this).find('input').val() * 1;
         })
         return total
     }
@@ -870,35 +911,36 @@
         }
     });
 
-    function strToNum(str){
-        return str.replace(/[^0-9]/ig,"");
+    function strToNum(str) {
+        return str.replace(/[^0-9]/ig, "");
     };
 
     function countPrice() {
         var totalPrice = 0;
-        var _cpuPrice = strToNum($('.fk_cpu').html())*$('.fk_cpu').attr('data-price');
-        var _ncPrice = strToNum($('.fk_nc').html())*$('.fk_nc').attr('data-price');
-        var _xtpPrice = strToNum($('.fk_xtp').html())*$('.fk_xtp').attr('data-price');
-        var _sjprice = strToNum($('.fk_sjp').html())*$('.fk_sjp').attr('data-price');
-        var _dkPrice = strToNum($('.fk_dk').html())*$('.fk_dk').attr('data-price');
-        var _fyzPrice = strToNum($('.fk_fyz').html())*$('.fk_fyz').attr('data-price');
+        var _cpuPrice = strToNum($('.fk_cpu').html()) * $('.fk_cpu').attr('data-price');
+        var _ncPrice = strToNum($('.fk_nc').html()) * $('.fk_nc').attr('data-price');
+        var _xtpPrice = strToNum($('.fk_xtp').html()) * $('.fk_xtp').attr('data-price');
+        var _sjprice = strToNum($('.fk_sjp').html()) * $('.fk_sjp').attr('data-price');
+        var _dkPrice = strToNum($('.fk_dk').html()) * $('.fk_dk').attr('data-price');
+        var _fyzPrice = strToNum($('.fk_fyz').html()) * $('.fk_fyz').attr('data-price');
         var _time = strToNum($('.fk_sc').html());
         var _num = $('.fk_sl').html();
-        totalPrice = (_cpuPrice+_ncPrice+_xtpPrice+_sjprice+_dkPrice+_fyzPrice)*_time*_num;
+        totalPrice = (_cpuPrice + _ncPrice + _xtpPrice + _sjprice + _dkPrice + _fyzPrice) * _time * _num;
         $('.money-detail span').html(tran(totalPrice));
         $('.price .num').html(tran(totalPrice));
     };
+
     function tran(price) {
-        price=price+"";
+        price = price + "";
         var v, j, sj, rv = "";
         v = price.replace(/,/g, "").split(".");
         j = v[0].length % 3;
         sj = v[0].substr(j).toString();
-        for(var i = 0; i < sj.length; i++) {
+        for (var i = 0; i < sj.length; i++) {
             rv = (i % 3 == 0) ? rv + "," + sj.substr(i, 1) : rv + sj.substr(i, 1);
         }
         var rvalue = (v[1] == undefined) ? v[0].substr(0, j) + rv : v[0].substr(0, j) + rv + "." + v[1];
-        if(rvalue.charCodeAt(0) == 44) {
+        if (rvalue.charCodeAt(0) == 44) {
             rvalue = rvalue.substr(1);
         }
         return rvalue;
