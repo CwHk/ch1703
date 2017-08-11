@@ -577,6 +577,7 @@ body {
     .configbox {
         position: relative;
         .show-detail {
+            display: none;
             width: 288px;
             height: 458px;
             position: absolute;

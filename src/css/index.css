@@ -113,6 +113,10 @@ header .container {
     height: auto;
     margin-top: 30px;
 }
+.four>div[class*='col-']{
+    height: 173px;
+}
+
 
 // .four{
 //     overflow: hidden;
