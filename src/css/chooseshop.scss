@@ -400,9 +400,10 @@ body {
                 height: 24px;
                 width: 24px;
                 top: -10px;
-                border: 1px solid #1873d0;
+                // border: 1px solid #1873d0;
                 background: url(../images/zhtkz.png) no-repeat center center;
-                background-size: 100% 100%;
+                // background-size: 100% 100%;
+                z-index: 9;
             }
             .config003 {
                 position: absolute;
@@ -446,9 +447,10 @@ body {
                 height: 24px;
                 width: 24px;
                 top: -10px;
-                border: 1px solid #1873d0;
+                // border: 1px solid #1873d0;
                 background: url(../images/zhtkz.png) no-repeat center center;
-                background-size: 100% 100%;
+                // background-size: 100% 100%;
+                z-index: 9;
             }
             .config02 {
                 position: absolute;
@@ -460,9 +462,10 @@ body {
                 height: 24px;
                 width: 24px;
                 top: -10px;
-                border: 1px solid #1873d0;
+                // border: 1px solid #1873d0;
                 background: url(../images/zhtkz.png) no-repeat center center;
-                background-size: 100% 100%;
+                // background-size: 100% 100%;
+                z-index: 9;
             }
             .config3 {
                 position: absolute;
@@ -544,7 +547,7 @@ body {
                     position: absolute;
                     width: 9.9333%;
                     height: 10px;
-                    left: -1px;
+                    left: 1px;
                     background: url(../images/jindutiao.png) no-repeat center center;
                     background-size: cover;
                     top: -2px;
@@ -553,7 +556,7 @@ body {
                     position: absolute;
                     width: 16.333333%;
                     height: 10px;
-                    left: -1px;
+                    left: 1px;
                     background: url(../images/jindutiao.png) no-repeat center center;
                     background-size: cover;
                     top: -2px;
