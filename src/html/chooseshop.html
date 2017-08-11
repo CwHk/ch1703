@@ -262,12 +262,12 @@
                             </div>
                             <div class="num-text">
                                 <span class="text1 config1 "><div class="cc">|</div>0M</span>
-                                <span class="text1 config2 "><div class="cc">|</div>5M</span>
-                                <span class="text1 config3 "><div class="cc">|</div>10M</span>
-                                <span class="text1 config4 "><div class="cc">|</div>20M</span>
-                                <span class="text1 config5 "><div class="cc">|</div>30M</span>
-                                <span class="text3 config6 "><div class="cc">|</div>40M</span>
-                                <span class="text1 text2 config7 "><div class="cc">|</div><span class="max_dk">50</span>M</span>
+                                <span class="text1 config2 "><div class="cc">|</div>10M</span>
+                                <span class="text1 config3 "><div class="cc">|</div>20M</span>
+                                <span class="text1 config4 "><div class="cc">|</div>30M</span>
+                                <span class="text1 config5 "><div class="cc">|</div>40M</span>
+                                <span class="text3 config6 "><div class="cc">|</div>50M</span>
+                                <span class="text1 text2 config7 "><div class="cc">|</div><span class="max_dk">60</span>M</span>
                             </div>
                             <div class="shpcarj">
                                 <div class="box-s choosedk">
@@ -609,25 +609,28 @@
         if (tag) {
             var left = e.pageX - box_left;
             var _width = $(this).width();
+            console.log(_width)
             if (left <= 0) {
                 left = 0;
-            } else if (left > 890) {
-                left = 890;
+            } else if (left > _width-12) {
+                left = _width-12;
             }
             $(this).find('.mosuemo').css('left', left);
             $(this).find('.schedule-config-ls').width(left);
             var max_item = $(this).find('.num-text .text1:last span');
-            console.log(max_item.html());
-            var input_num = Math.floor((left/_width)*(max_item.html()));
+            var input_num = Math.floor(((left+12)/(_width-12))*(max_item.html()));
             console.log(input_num);
             if(max_item.hasClass('max_dk')){
                 $('.fk_dk').html(input_num+'M');
+                $('.bottomPz_dk').html(input_num+'M');
                 $(this).find('.shpcarj input').val(input_num+' M');
             }else if(max_item.hasClass('max_fyz')){
                 $('.fk_fyz').html(input_num+'G');
+                $('.bottomPz_fyz').html(input_num+'G');
                 $(this).find('.shpcarj input').val(input_num+' G');
             }else if(max_item.hasClass('max_sc')){
                 $('.fk_sc').html(input_num+'月');
+                $('.bottomPz_sc').html(input_num+'月');
                 $(this).find('.shpcarj input').val(input_num+' 月');
             }
             //百分比   parseInt((left/890)*100) + '%
@@ -641,8 +644,8 @@
             var _width = $(this).width();
             if (left <= 0) {
                 left = 0;
-            } else if (left > 890) {
-                left = 890;
+            } else if (left > _width-12) {
+                left = _width-12;
             }
             $(this).find('.mosuemo').css('left', left);
             $(this).find('.schedule-config-ls').animate({
@@ -650,16 +653,19 @@
             }, 300);
             var max_item = $(this).next().find('.text1:last span');
             console.log(max_item.html());
-            var input_num = Math.floor((left/_width)*(max_item.html()));
+            var input_num = Math.floor(((left+12)/(_width-12))*(max_item.html()));
             console.log(input_num);
             if(max_item.hasClass('max_dk')){
-                $('.fk_dk').html(input_num+'M');
+                $('._dk').html(input_num+'M');
+                $('.bottomPz_dk').html(input_num+'M');
                 $(this).nextAll('.shpcarj').find('input').val(input_num+' M');
             }else if(max_item.hasClass('max_fyz')){
                 $('.fk_fyz').html(input_num+'G');
+                $('.bottomPz_fyz').html(input_num+'G');
                 $(this).nextAll('.shpcarj').find('input').val(input_num+' G');
             }else if(max_item.hasClass('max_sc')){
                 $('.fk_sc').html(input_num+'月');
+                $('.bottomPz_sc').html(input_num+'月');
                 $(this).nextAll('.shpcarj').find('input').val(input_num+' 月');
             }
             //百分比   parseInt((left/890)*100) + '%
@@ -762,19 +768,22 @@
         countPrice();
     });
 
-    function count_jdt(_num,a){
-        var _width = $('.schedule-item').width();
-        var max_item = $(a).parents('.schedule-item').find('.num-text .text1:last span');
-        var _left = _num/(max_item.html())*_width  
+    function count_jdt(_num,max_item,a){
+        var _width = $('.schedule-item').width()-12;
+        var _left = _num/max_item*_width  
         $(a).parents('.schedule-item').find('.mosuemo').css('left', _left);
         $(a).parents('.schedule-item').find('.schedule-config-ls').width(_left);
     }
     $('.choosedk .jia').on("click", function() {
         var _num = strToNum($('.choosedk input').val()) * 1 + 1;
+        var max_item = $(this).parents('.schedule-item').find('.num-text .text1:last span').html()*1;
+        if(_num>=max_item){
+            _num = max_item;
+        }
         $('.choosedk input').val(_num + ' M');
         $('.bottomPz_dk').html(_num + 'M');
         $('.fk_dk').html(_num + 'M');
-        count_jdt(_num,this);
+        count_jdt(_num,max_item,this);
         countPrice();
     });
     $('.choosedk .jian').on("click", function() {
@@ -782,32 +791,32 @@
         if (_num == -1) {
             return false;
         }
+        var max_item = $(this).parents('.schedule-item').find('.num-text .text1:last span').html()*1;
         $('.choosedk input').val(_num + ' M');
         $('.bottomPz_dk').html(_num + 'M');
         $('.fk_dk').html(_num + 'M');
-        
-        // var _width = $('.schedule-item').width();
-        // var max_item = $(this).parents('.schedule-item').find('.num-text .text1:last span');
-        // var _left = _num/(max_item.html())*_width  
-        // $(this).parents('.schedule-item').find('.mosuemo').css('left', _left);
-        // $(this).parents('.schedule-item').find('.schedule-config-ls').width(_left);
-        count_jdt(_num,this);
+        count_jdt(_num,max_item,this);
         countPrice();
     });
     $('.choosedk input').on("input", function() {
         var _num = strToNum($(this).val()) * 1;
+        var max_item = $(this).parents('.schedule-item').find('.num-text .text1:last span').html()*1;
         $('.bottomPz_dk').html(_num + 'M');
         $('.fk_dk').html(_num + 'M');
-        count_jdt(_num,this);
+        count_jdt(_num,max_item,this);
         countPrice();
     });
 
     $('.choosefyz .jia').on("click", function() {
         var _num = strToNum($('.choosefyz input').val()) * 1 + 1;
+        var max_item = $(this).parents('.schedule-item').find('.num-text .text1:last span').html()*1;
+        if(_num>=max_item){
+            _num = max_item;
+        }
         $('.choosefyz input').val(_num + ' G');
         $('.bottomPz_fyz').html(_num + 'G');
         $('.fk_fyz').html(_num + 'G');
-        count_jdt(_num,this);
+        count_jdt(_num,max_item,this);
         countPrice();
     });
     $('.choosefyz .jian').on("click", function() {
@@ -815,26 +824,32 @@
         if (_num == -1) {
             return false;
         }
+        var max_item = $(this).parents('.schedule-item').find('.num-text .text1:last span').html()*1;
         $('.choosefyz input').val(_num + ' G');
         $('.bottomPz_fyz').html(_num + 'G');
         $('.fk_fyz').html(_num + 'G');
-        count_jdt(_num,this);
+        count_jdt(_num,max_item,this);
         countPrice();
     });
     $('.choosefyz input').on("input", function() {
         var _num = strToNum($(this).val()) * 1;
+        var max_item = $(this).parents('.schedule-item').find('.num-text .text1:last span').html()*1;
         $('.bottomPz_fyz').html(_num + 'G');
         $('.fk_fyz').html(_num + 'G');
-        count_jdt(_num,this);
+        count_jdt(_num,max_item,this);
         countPrice();
     });
 
     $('.choosesc .jia').on("click", function() {
         var _num = strToNum($('.choosesc input').val()) * 1 + 1;
+        var max_item = $(this).parents('.schedule-item').find('.num-text .text1:last span').html()*1;
+        if(_num>=max_item){
+            _num = max_item;
+        }
         $('.choosesc input').val(_num + ' 月');
         $('.bottomPz_sc').html(_num + '月');
         $('.fk_sc').html(_num + '月');
-        count_jdt(_num,this);
+        count_jdt(_num,max_item,this);
         countPrice();
     });
     $('.choosesc .jian').on("click", function() {
@@ -842,17 +857,19 @@
         if (_num == -1) {
             return false;
         }
+        var max_item = $(this).parents('.schedule-item').find('.num-text .text1:last span').html()*1;
         $('.choosesc input').val(_num + ' 月');
         $('.bottomPz_sc').html(_num + '月');
         $('.fk_sc').html(_num + '月');
-        count_jdt(_num,this);
+        count_jdt(_num,max_item,this);
         countPrice();
     });
     $('.choosesc input').on("input", function() {
         var _num = strToNum($(this).val()) * 1;
+        var max_item = $(this).parents('.schedule-item').find('.num-text .text1:last span').html()*1;
         $('.bottomPz_sc').html(_num + '月');
         $('.fk_sc').html(_num + '月');
-        count_jdt(_num,this);
+        count_jdt(_num,max_item,this);
         countPrice();
     });
 
